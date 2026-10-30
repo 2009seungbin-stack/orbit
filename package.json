@@ -1,0 +1,9 @@
+{
+  "name": "orbit-deck",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "check": "node --check js/main.js && node --check js/world.js && node --check js/graph.js && node --check js/slides.js && node --check js/workflows.js"
+  }
+}

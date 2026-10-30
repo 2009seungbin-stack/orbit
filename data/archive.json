@@ -1,0 +1,2953 @@
+{
+  "generatedAt": "2026-10-24",
+  "timezone": "Asia/Seoul",
+  "scope": "이 PC에 남은 로컬 기록의 선별 아카이브. 삭제·외부 계정·이동된 기록은 누락될 수 있습니다.",
+  "counts": {
+    "projects": 26,
+    "milestones": 87,
+    "codexThreads": 1140,
+    "claudeSessions": 156,
+    "claudeRequests": 1012,
+    "folders": 31,
+    "visuals": 40,
+    "documents": 24,
+    "models": 3,
+    "clips": 1,
+    "visualProjects": 12
+  },
+  "activity": [
+    {
+      "month": "2026-06",
+      "codex": 63,
+      "claude": 0
+    },
+    {
+      "month": "2026-07",
+      "codex": 22,
+      "claude": 0
+    },
+    {
+      "month": "2026-08",
+      "codex": 326,
+      "claude": 228
+    },
+    {
+      "month": "2026-09",
+      "codex": 514,
+      "claude": 494
+    },
+    {
+      "month": "2026-10",
+      "codex": 215,
+      "claude": 290
+    }
+  ],
+  "methodology": [
+    "Codex 로컬 SQLite를 읽기 전용으로 조회하고 Claude history.jsonl의 폴더·시점 정보를 대조했습니다.",
+    "하위 에이전트를 포함한 스레드 수는 작업 횟수·완성도·기여율을 뜻하지 않습니다. Claude 세션 수와 Codex 스레드 수는 직접 비교할 지표가 아닙니다.",
+    "세부 프로젝트가 상위 폴더를 공유할 경우 같은 폴더 통계가 표시됩니다. 최초 날짜는 시작일이 아니라 남아 있는 기록에서 처음 발견한 날짜입니다.",
+    "발전 단계는 문서·Git 이력·과거 작업 요약을 사람이 읽기 좋게 편집했습니다. 날짜가 불명확한 단계는 날짜 미상으로 표시합니다.",
+    "원본 대화, 로컬 절대 경로, 계정·연락처와 인증 정보는 배포 데이터에 포함하지 않았습니다.",
+    "기록은 자동 실시간 동기화가 아닙니다. 로컬 재탐색 후 선별 데이터를 갱신하는 스냅샷입니다.",
+    "2026-10-24 개편: 원본 캡처·렌더·그래프 40점, 실행 영상과 실제 GLB, 문서 발췌를 추가했습니다. 유형을 구분하고 비교 대상이 다른 버전인지 같은 버전의 기능 흐름인지 표시합니다."
+  ],
+  "projects": [
+    {
+      "id": "vesna",
+      "title": "CafeVesna",
+      "subtitle": "A world that keeps living.",
+      "category": "worlds",
+      "folders": [
+        "미연시"
+      ],
+      "stack": [
+        "Godot",
+        "GDScript",
+        "3D / VN"
+      ],
+      "description": "대화에서 시작해 카페 운영, 생활 수첩, 약속과 관계, 3D 마을로 자라난 생활형 비주얼 노벨.",
+      "before": "대화와 장면을 중심으로 한 미연시 제작",
+      "after": "카페 플레이 루프와 Free Life, 3D 마을을 연결한 생활 시스템",
+      "limitation": "검증된 세부 기능과 남은 렌더·제작 진단이 공존합니다. 전체 게임의 출시 완료를 뜻하지 않습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-06-20",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 472,
+        "claude": 27
+      },
+      "events": [
+        {
+          "date": "2026-06-20",
+          "title": "첫 번째 세계",
+          "body": "미연시 폴더의 Codex 작업 기록 시작. 이후 카페와 캐릭터 시스템으로 작업이 확장됩니다.",
+          "source": "Codex 세션 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-09-16",
+          "title": "한 잔의 커피가 플레이가 되다",
+          "body": "치비 대화 → VN → 1인칭 제조 → 전달을 카페 사이클로 연결.",
+          "source": "Git 6061f07",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-09-20",
+          "title": "카페를 실제로 운영하기",
+          "body": "Business 진입, 주문·서빙·매출과 저장 흐름을 수정하고 실행 기록을 남김.",
+          "source": "gameplay_repair_20260920 / REPORT.md",
+          "type": "verification"
+        },
+        {
+          "date": "2026-09-27",
+          "title": "Free Life, 그리고 3D 마을",
+          "body": "생활 수첩, 약속, 이동, 관계 기록과 내비게이션용 3D 마을을 구현.",
+          "source": "Free Life 작업 요약 · 2026-09-27",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "커피 제조 시점과 조작 수정",
+          "body": "보이지 않던 제조 과정을 바리스타 시점·확대·게이지·놓기 미리보기로 수정. before/after 캡처와 변경 문서를 연결합니다.",
+          "source": "qa/cooking_fp_20261019/README.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "손님이 주문하고 마시는 영업 흐름",
+          "body": "대화→제조→전달 사이클에서 손님 입장·줄·주문·픽업·착석으로 확장한 기록과 화면.",
+          "source": "qa/business_20261019/README.md",
+          "type": "implementation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "미연시/CafeVesna/project.godot",
+          "exists": true,
+          "kind": "로컬 소스"
+        },
+        {
+          "name": "미연시/CafeVesna/qa/gameplay_repair_20260920/REPORT.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/vesna-00.webp",
+      "index": 1,
+      "media": [
+        "ev-00",
+        "ev-01",
+        "ev-02",
+        "ev-03",
+        "ev-04",
+        "ev-05",
+        "ev-06"
+      ],
+      "documents": [
+        "doc-00",
+        "doc-01"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "nerulio",
+      "title": "Nerulio",
+      "subtitle": "From a tool to an ecosystem.",
+      "category": "systems",
+      "folders": [
+        "SITE"
+      ],
+      "stack": [
+        "Web",
+        "Cloudflare",
+        "Local-first"
+      ],
+      "description": "이미지·PDF·게임 에셋·미디어를 한 작업실에서 다루는 로컬 편집기. 과거 웹 도구 기록과 이번에 새로 확인한 실제 편집 흐름을 함께 남깁니다.",
+      "before": "개별 유틸리티와 벤치마크 페이지",
+      "after": "진단·콘텐츠·커뮤니티 도구·SEO를 함께 다루는 서비스",
+      "limitation": "로컬 체크아웃과 배포 시점은 다릅니다. 검색 순위, 광고 승인, 수익 성과를 확정하지 않습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-09-20",
+      "last": "2026-10-24",
+      "counts": {
+        "codex": 16,
+        "claude": 13
+      },
+      "events": [
+        {
+          "date": "2026-09-21",
+          "title": "대용량 처리와 AI 런타임",
+          "body": "ZIP64와 큰 파일 CRC 개선, 독립된 AI 런타임 페이지를 개발.",
+          "source": "Git f3fc1af / d9fd223",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-09-27",
+          "title": "다국어 서비스로 확장",
+          "body": "커스텀 도메인과 지역별 검색 콘텐츠, 배포 상태를 따로 점검.",
+          "source": "Nerulio 도메인·SEO 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-05",
+          "title": "제작 전 문제를 찾는 Preflight",
+          "body": "OBS·Studio·Blender·Godot 작업의 사전 검사 도구를 확장.",
+          "source": "Preflight Engine 작업 요약",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "콘텐츠와 홈 경로 개선",
+          "body": "낮은 가치 콘텐츠 문제와 홈 라우팅을 다루는 개선 작업 기록.",
+          "source": "콘텐츠 개선 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-24",
+          "title": "로컬 작업실을 새로 실행해 확인",
+          "body": "현재 로컬 소스의 이미지 샘플을 열고 32×32 도트 에셋으로 변환한 화면을 캡처. UI 표시 버전은 v1.3, README 제목은 v1.2로 남아 있어 각각의 출처를 그대로 표기합니다.",
+          "source": "로컬 브라우저 실행 / SITE README.md",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "SITE/package.json",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/nerulio-home.webp",
+      "index": 2,
+      "media": [
+        "nerulio-home",
+        "nerulio-editor",
+        "nerulio-pixel"
+      ],
+      "documents": [
+        "doc-09"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "go2",
+      "title": "NCRC Robotics",
+      "subtitle": "Learn. Fall. Walk again.",
+      "category": "intelligence",
+      "folders": [
+        "issac_sim"
+      ],
+      "stack": [
+        "Isaac Sim",
+        "RL",
+        "Python"
+      ],
+      "description": "H1과 Go2 로봇의 학습·평가·제출 과정을 다룬 강화학습 실험. 체크포인트를 비교하고 실패 조건을 분리해 기록했습니다.",
+      "before": "스크래치 학습과 대회 제출 경로 조사",
+      "after": "후보 정책 비교, 최종 정책 보존, 제출 영수증 확인",
+      "limitation": "내부 평가와 공식 점수는 별개입니다. 공식 성적이 확인되지 않은 기록에는 점수를 만들지 않습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-09-01",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 39,
+        "claude": 10
+      },
+      "events": [
+        {
+          "date": "2026-09-01",
+          "title": "학습 기록의 시작",
+          "body": "Isaac Sim 프로젝트에서 Codex 작업이 확인되는 첫 날짜.",
+          "source": "Codex 세션 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-09-01",
+          "title": "H1 학습과 제출 조사",
+          "body": "스크래치 학습 벤치마크, 평가기와 제출 절차를 조사.",
+          "source": "H1 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": null,
+          "title": "후보 정책을 같은 기준으로",
+          "body": "10월의 Go2 평가 기록. 정책을 오프라인 평가하며 생존·전진·계단 조건을 비교.",
+          "source": "Go2 오프라인 평가 작업 요약 · 단계 날짜 미확정",
+          "type": "verification"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "C0 보존과 제출 확인",
+          "body": "C0_5500을 최종 정책으로 보존하고 제출 영수증과 서버 종료 확인을 기록.",
+          "source": "FINAL_SUBMISSION_RECEIPT_20261019.json 기록",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "issac_sim/HANDOVER.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/go2-32.webp",
+      "index": 3,
+      "media": [
+        "ev-32",
+        "ev-33"
+      ],
+      "documents": [
+        "doc-16"
+      ],
+      "models": [],
+      "clips": [
+        "go2-c0-play"
+      ],
+      "coverage": "visual"
+    },
+    {
+      "id": "novel",
+      "title": "Story Engine",
+      "subtitle": "Building a voice, one revision at a time.",
+      "category": "stories",
+      "folders": [
+        "소설 자동화",
+        "진짜 소설",
+        "진짜 소설 - 복사본"
+      ],
+      "stack": [
+        "Writing system",
+        "Evaluation",
+        "Python"
+      ],
+      "description": "소설 자동화에서 시작해 설정·관계·말맛·수정 입력과 독립 평가 절차를 갖춘 집필 엔진으로 발전한 작업.",
+      "before": "회차 집필을 자동화하는 워크플로우",
+      "after": "V34.1 문체·관계 맥락과 V35 독립 평가 절차",
+      "limitation": "구조 검사를 통과한 사실을 독자 반응이나 문학적 완성도로 해석하지 않습니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-06-20",
+      "last": "2026-09-28",
+      "counts": {
+        "codex": 413,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-06-20",
+          "title": "소설 자동화 시작",
+          "body": "소설 자동화 폴더의 초기 Codex 작업 기록.",
+          "source": "Codex 세션 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-07-29",
+          "title": "별도 작업본에서 반복 개선",
+          "body": "진짜 소설 복사본의 작업 기록이 시작되며 수정과 검토를 반복.",
+          "source": "Codex 세션 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-08-28",
+          "title": "V34.1의 문장과 관계 맥락",
+          "body": "말맛과 관계 맥락, 분포 범위를 다룬 엔진 개선 작업의 시작 기록.",
+          "source": "V34.1 작업 요약 · 세션 시작일",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-09-28",
+          "title": "수정 입력도 검증하기",
+          "body": "수정 입력 매니페스트와 후속 문장, 구조 검증 기록을 구분.",
+          "source": "V34.1 수정 입력 작업 요약",
+          "type": "verification"
+        },
+        {
+          "date": null,
+          "title": "V35의 독립 평가 경계",
+          "body": "고정된 입력과 평가 절차로 분포 신뢰성을 검사하는 후속 실험.",
+          "source": "V35 작업 요약 · 날짜 미확정",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "진짜 소설 - 복사본/AGENTS.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 4,
+      "media": [],
+      "documents": [
+        "request-novel"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "lastlight",
+      "title": "Last Light",
+      "subtitle": "A factory against the night.",
+      "category": "worlds",
+      "folders": [
+        "ROB"
+      ],
+      "stack": [
+        "Roblox",
+        "Luau",
+        "Blender"
+      ],
+      "description": "보호 불빛과 공장 생존에서 팀 거점·파밍·자유 건설로 방향을 확장한 Roblox 게임.",
+      "before": "첫 밤을 버티는 공장·전력 생존 루프",
+      "after": "파밍과 건설 중심 v2, 로비·매치 입력과 UI 수정",
+      "limitation": "로컬 검수, 과거 게시 기록, 실제 휴대전화 검사는 서로 다른 단계입니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-10-09",
+      "last": "2026-10-18",
+      "counts": {
+        "codex": 6,
+        "claude": 5
+      },
+      "events": [
+        {
+          "date": "2026-10-10",
+          "title": "Style A의 형태와 작동",
+          "body": "로우폴리 스타일과 발전기·나무·괴물 샘플, 벌목 작동 검수를 분리.",
+          "source": "ROB / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-13",
+          "title": "게임의 방향을 다시 설계",
+          "body": "팀 거점, 파밍, 자유 건설과 밤 괴물을 결합하는 v2로 변경.",
+          "source": "ROB / README.md · 방향 변경",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-15",
+          "title": "로비와 매치 게시 기록",
+          "body": "UI·공격 입력·채굴·모닥불·줌 수정과 게시 버전 확인 기록.",
+          "source": "combat_input_20261015 / REPORT.md",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "ROB/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "ROB/v2/qa/combat_input_20261015/REPORT.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/lastlight-07.webp",
+      "index": 5,
+      "media": [
+        "ev-07",
+        "ev-08",
+        "ev-09",
+        "ev-10",
+        "ev-11"
+      ],
+      "documents": [
+        "doc-02"
+      ],
+      "models": [
+        "model-0",
+        "model-1"
+      ],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "pets",
+      "title": "Pet Realms",
+      "subtitle": "Small companions. Bigger worlds.",
+      "category": "worlds",
+      "folders": [
+        "ROB"
+      ],
+      "stack": [
+        "Roblox",
+        "Luau",
+        "3D Art"
+      ],
+      "description": "펫이 채굴하고 성장하는 독립 Roblox 프로토타입. 부유섬과 소원나무, 정동 동굴, 천문 신전으로 환경을 확장했습니다.",
+      "before": "펫 채굴·장착·부화·환생 초기 루프",
+      "after": "성장·UI v02를 보존하고 환경 모델링 v04로 확장",
+      "limitation": "상위 ROB 폴더의 도구 사용 통계를 공유합니다. 게시·결제·실서버 저장 검증은 포함하지 않습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-10-09",
+      "last": "2026-10-18",
+      "counts": {
+        "codex": 6,
+        "claude": 5
+      },
+      "events": [
+        {
+          "date": "2026-10-18",
+          "title": "기존 게임에서 독립",
+          "body": "Last Light를 수정하지 않는 별도 pet_realms 프로젝트 구축 기록.",
+          "source": "Pet Realms 작업 요약",
+          "type": "implementation"
+        },
+        {
+          "date": null,
+          "title": "채굴과 성장의 순환",
+          "body": "펫 장착, 레벨 업, 합성, 부화와 환생 기능을 초기 프로토타입에 구성.",
+          "source": "pet_realms / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": null,
+          "title": "환경 v04",
+          "body": "거대 소원나무, 정동 동굴과 천문 신전을 갖춘 환경 모델링으로 확장.",
+          "source": "environment_v04 / README.md",
+          "type": "implementation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "ROB/pet_realms/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "ROB/pet_realms/art/environment_v04/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/pets-12.webp",
+      "index": 6,
+      "media": [
+        "ev-12",
+        "ev-13",
+        "ev-14",
+        "ev-15",
+        "ev-16"
+      ],
+      "documents": [
+        "doc-03"
+      ],
+      "models": [
+        "model-2"
+      ],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "horror",
+      "title": "NO TOP FLOOR",
+      "subtitle": "How far can you go?",
+      "category": "worlds",
+      "folders": [
+        "horrorgames"
+      ],
+      "stack": [
+        "Godot",
+        "Roblox",
+        "Luau"
+      ],
+      "description": "깊어지는 층과 회수·탈출을 중심으로 한 공포 게임. Godot 실행 점검 후 Roblox 포트를 시작했습니다.",
+      "before": "Godot 기반 탐색·회수와 로비",
+      "after": "깊은 층의 실패 진단, Roblox의 초기 시각·조작 구성",
+      "limitation": "30층 진행 문제와 Roblox 손전등 미해결 기록이 남아 있습니다. 갤러리는 게임 완성 증거가 아닙니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-08-25",
+      "last": "2026-10-09",
+      "counts": {
+        "codex": 1,
+        "claude": 12
+      },
+      "events": [
+        {
+          "date": "2026-08-25",
+          "title": "초기 공포 게임 작업",
+          "body": "Claude 프로젝트 기록이 확인되는 첫 날짜.",
+          "source": "Claude 요청 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-10-09",
+          "title": "깊은 층에서 드러난 문제",
+          "body": "얕은 층과 스트레스 검사를 넘어 30층의 몬스터·할당량 문제를 확인.",
+          "source": "Godot 상태 감사 작업 요약",
+          "type": "verification"
+        },
+        {
+          "date": "2026-10-09",
+          "title": "Roblox로 옮기는 첫 단계",
+          "body": "PC 조작을 우선하고 복도·방·회수·탈출의 Studio 갤러리를 제작.",
+          "source": "roblox / README.md",
+          "type": "implementation"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "horrorgames/roblox/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/horror-17.webp",
+      "index": 7,
+      "media": [
+        "ev-17",
+        "ev-18",
+        "ev-19"
+      ],
+      "documents": [
+        "doc-04"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "blackfire",
+      "title": "Black Fire",
+      "subtitle": "One boss. A different game.",
+      "category": "worlds",
+      "folders": [
+        "JIHOGAY"
+      ],
+      "stack": [
+        "Godot",
+        "3D pixel shader",
+        "GDScript"
+      ],
+      "description": "3D 세계에 저해상도·디더 셰이더를 입힌 보스전 중심 JRPG. 보스마다 다른 플레이 형식을 지향합니다.",
+      "before": "3D 맵에 도트 스프라이트를 세우는 기획",
+      "after": "1보스 액션, 마을과 대화 흐름을 가진 초기 게임",
+      "limitation": "README는 1보스 플레이 가능과 후속 보스 스텁을 구분합니다. 이번 작업에서 게임을 다시 플레이하지 않았습니다.",
+      "tools": [
+        "Claude"
+      ],
+      "first": "2026-09-10",
+      "last": "2026-09-14",
+      "counts": {
+        "codex": 0,
+        "claude": 6
+      },
+      "events": [
+        {
+          "date": "2026-09-10",
+          "title": "3D인데, 도트처럼",
+          "body": "3D 맵과 셰이더를 사용하겠다는 Claude 초기 요청 확인.",
+          "source": "Claude 요청 기록",
+          "type": "discovery"
+        },
+        {
+          "date": null,
+          "title": "첫 보스의 전투",
+          "body": "3타 콤보, 대시, 특수기와 역마 보스 액션을 구성.",
+          "source": "JIHOGAY / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": null,
+          "title": "스크린샷으로 흐름 남기기",
+          "body": "타이틀·마을·보스전·대화·선택지의 smoke 캡처를 보존.",
+          "source": ".smoke 캡처 파일",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "JIHOGAY/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "JIHOGAY/project.godot",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": "evidence/blackfire-20.webp",
+      "index": 8,
+      "media": [
+        "ev-20",
+        "ev-21",
+        "ev-22"
+      ],
+      "documents": [
+        "doc-05"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "jarvis",
+      "title": "Jarvis",
+      "subtitle": "An assistant with a presence.",
+      "category": "intelligence",
+      "folders": [
+        "local ai"
+      ],
+      "stack": [
+        "Electron",
+        "Python",
+        "Local LLM",
+        "VRM"
+      ],
+      "description": "로컬 모델과 음성, 작업 공간, Windows 조작과 VRM 아바타를 연결한 데스크톱 AI 비서.",
+      "before": "로컬 추론과 도구 실행 부품을 연결",
+      "after": "음성·화면 관찰·작업 추적·아바타 동작 경로 개선",
+      "limitation": "실행 중인 서버나 현재 모델 상태는 이번 아카이브 작업에서 확인하지 않았습니다. 문서의 과거 검사 결과입니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-08-22",
+      "last": "2026-10-17",
+      "counts": {
+        "codex": 8,
+        "claude": 22
+      },
+      "events": [
+        {
+          "date": "2026-08-22",
+          "title": "로컬 AI 작업 흔적",
+          "body": "local ai 폴더에서 확인되는 Codex 기록의 시작.",
+          "source": "Codex 세션 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-10-07",
+          "title": "인수인계 가능한 비서",
+          "body": "모델·실행 루프·독립 작업 공간·음성·Electron 화면을 문서화.",
+          "source": "jarvis / HANDOVER.ko.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-09",
+          "title": "도구 실패와 화면 관찰 수정",
+          "body": "실패 반복 방지, 실제 공유 화면 관찰, 실패 결과 표시 경로를 수정.",
+          "source": "HANDOVER.ko.md · 최신 상태",
+          "type": "verification"
+        },
+        {
+          "date": "2026-10-17",
+          "title": "표정과 몸동작 전달 복구",
+          "body": "실제 system 지시 누락과 복수 아바타 명령 파싱 문제를 진단·수정.",
+          "source": "HANDOVER.ko.md · 10-17 기록",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "local ai/jarvis/HANDOVER.ko.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/jarvis-24.webp",
+      "index": 9,
+      "media": [
+        "ev-24",
+        "ev-25",
+        "ev-26"
+      ],
+      "documents": [
+        "doc-06"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "claudelocal",
+      "title": "Claude Local",
+      "subtitle": "Your workspace, under your control.",
+      "category": "intelligence",
+      "folders": [
+        "편집"
+      ],
+      "stack": [
+        "Python",
+        "Tkinter",
+        "Windows"
+      ],
+      "description": "폴더 선택, 파일 diff 검토, 명령 실행 승인과 복원을 갖춘 Windows용 Claude API 코딩 에이전트.",
+      "before": "로컬에서 코딩 에이전트를 쓰고 싶다는 요청",
+      "after": "v1.1.0 소스·테스트·Windows EXE와 배포 ZIP",
+      "limitation": "편집 폴더의 사용 통계를 공유합니다. 유료 계정 키와 실제 모델 사용 가능 여부를 검증한 결과는 아닙니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-10-10",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 52,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-10-10",
+          "title": "파일 변경을 검토하는 에이전트",
+          "body": "작업 폴더 범위 제한, diff 승인, 백업과 복원 구조를 구현.",
+          "source": "Claude Local 작업 요약",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-10",
+          "title": "실행과 종료의 경계 수정",
+          "body": "Tk 종료 콜백과 창 크기, 패키지 데이터 문제를 수정.",
+          "source": "VERIFICATION-v1.1.0.ko.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-10",
+          "title": "v1.1.0 로컬 배포",
+          "body": "30개 단위 검사와 EXE 로컬 점검, ZIP 무결성 검증 기록.",
+          "source": "VERIFICATION-v1.1.0.ko.md",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "편집/claude-local/README.ko.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "편집/claude-local/VERIFICATION-v1.1.0.ko.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 10,
+      "media": [],
+      "documents": [
+        "doc-07"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "hanmadi",
+      "title": "한마디 더",
+      "subtitle": "A little more confidence in Japan.",
+      "category": "systems",
+      "folders": [
+        "japan"
+      ],
+      "stack": [
+        "Flutter",
+        "STT / TTS",
+        "Android"
+      ],
+      "description": "일본 여행 현장에서 들은 말을 이해하고 답할 문장을 고르는 회화 앱. 인식·연습·오프라인 음성을 함께 확장했습니다.",
+      "before": "현장 질문과 답변을 돕는 회화 앱",
+      "after": "일본어 인식 개선, 40개 미션, 250개 표현과 내장 음원",
+      "limitation": "로컬 APK와 과거 검사 기록을 확인했습니다. 실기기 청취 품질과 온라인 인식 정확도는 별도 확인이 필요합니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-10-16",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 4,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-10-16",
+          "title": "일본어를 끝까지 듣기",
+          "body": "일본어 강제 인식, 여러 문장 누적과 최종 결과 대기, 후보 선택·원문 수정 추가.",
+          "source": "japan / README.md · 1.1.0",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-16",
+          "title": "연습의 폭과 음성 확대",
+          "body": "40개 미션, 250개 표현과 일본어·한국어 내장 음원 877개로 확장.",
+          "source": "japan / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "Piper 포함 APK 전달 기록",
+          "body": "내장 모델을 보존한 v1.1.0 APK 서명·패키지 점검과 전달 기록.",
+          "source": "Hanmadi 릴리스 작업 요약",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "japan/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "japan/scripts/verify_release.py",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 11,
+      "media": [],
+      "documents": [
+        "doc-08"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "shorts",
+      "title": "Shorts Pipeline",
+      "subtitle": "An edit starts before the timeline.",
+      "category": "motion",
+      "folders": [
+        "youtube-edit"
+      ],
+      "stack": [
+        "FFmpeg",
+        "Python",
+        "Transcription"
+      ],
+      "description": "소스 분석과 기획, 자막·음성·컷 편집, 렌더와 QC를 분리한 계획 기반 숏폼 제작 파이프라인.",
+      "before": "개별 쇼츠 편집과 참고 영상 조사",
+      "after": "기획 데이터에서 버전별 렌더·프레임·음성 검사까지",
+      "limitation": "렌더링과 기술 QC는 사람의 최종 검수나 원본 영상 재사용 권한을 대신하지 않습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-09-22",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 47,
+        "claude": 5
+      },
+      "events": [
+        {
+          "date": "2026-09-28",
+          "title": "계획을 편집의 입력으로",
+          "body": "기획 데이터와 FFmpeg 전체 계획 렌더러를 연결하는 제작 파이프라인 작업.",
+          "source": "로컬 편집 파이프라인 작업 요약",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-03",
+          "title": "롱폼 스토리텔링 실험",
+          "body": "서브컬처·미쿠 TMI를 실제 장면과 감정 반응 중심으로 재구성.",
+          "source": "미쿠 TMI 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-12",
+          "title": "장면과 음성, 순서를 보존",
+          "body": "만화의 원본 순서, 인물·표정 프레이밍과 영상별 검수 기록을 분리.",
+          "source": "만화 Shorts 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-14",
+          "title": "프레임 단위의 전달 검수",
+          "body": "댓글 오버레이와 세로 화면 구도, 최종 출력 QC를 누적.",
+          "source": "댓글 오버레이 작업 요약",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "youtube-edit/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 12,
+      "media": [],
+      "documents": [],
+      "models": [],
+      "clips": [],
+      "coverage": "summary"
+    },
+    {
+      "id": "profiles",
+      "title": "Editing Profiles",
+      "subtitle": "Every creator has a different rhythm.",
+      "category": "motion",
+      "folders": [
+        "편집"
+      ],
+      "stack": [
+        "FFmpeg",
+        "Style profiles",
+        "QC"
+      ],
+      "description": "A~E의 편집 스타일과 피드백을 독립적으로 관리하고 버전별 결과물을 만드는 제작 체계.",
+      "before": "인물별 참고 영상과 편집 요청",
+      "after": "프로필별 누적 규칙, 버전 보존과 소리·프레임 QC",
+      "limitation": "프로필 간 규칙은 자동 공유하지 않습니다. 클라이언트 원본과 개인정보는 사이트에 싣지 않았습니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-10-10",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 52,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-10-10",
+          "title": "작업 폴더에서 스타일 분리",
+          "body": "프로필별 참고와 제작 방식을 분리해 관리하는 기록.",
+          "source": "편집 프로젝트 작업 기록",
+          "type": "recorded"
+        },
+        {
+          "date": null,
+          "title": "피드백이 다음 버전에 남도록",
+          "body": "Profile B 피드백과 원본 대사 중심 편집, 이전 이력을 누적.",
+          "source": "Profile B 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-17",
+          "title": "새 기준과 결과물 보존",
+          "body": "새 프로필의 참고 조사를 분리하고 생성 파일 보존 정책을 정리.",
+          "source": "Profile E 조사 / 산출물 보존 작업 요약",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "편집/profiles/A/profile.json",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "편집/profiles/B/profile.json",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 13,
+      "media": [],
+      "documents": [
+        "doc-17"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "ultra",
+      "title": "Ultradedit",
+      "subtitle": "Timing is the whole story.",
+      "category": "motion",
+      "folders": [
+        "ultradedit"
+      ],
+      "stack": [
+        "Video research",
+        "Python",
+        "QC"
+      ],
+      "description": "게임 밈 편집의 타이밍과 효과를 연구하고 롱폼 참고 분석, 쇼츠 채널 운영을 실험한 제작 작업.",
+      "before": "게임 밈 레퍼런스와 효과 연구",
+      "after": "장르별 참고 분석과 실제 샘플 검수·지원용 편집",
+      "limitation": "기술 검사만으로 편집의 재미를 확정하지 않습니다. 채널 계정 정보와 지원 정보는 제외했습니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-10-17",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 28,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-10-17",
+          "title": "효과를 먼저 연구하기",
+          "body": "Dumbs·Buur의 편집 구조와 게임 밈 효과를 조사·실험.",
+          "source": "게임 밈 효과 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-18",
+          "title": "쇼츠 채널 실험",
+          "body": "PickASide에서 LoL VS로 방향을 변경한 쇼츠 운영 기록.",
+          "source": "채널 운영 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "다른 장르의 편집 문법",
+          "body": "패션 롱폼 참고 구조를 분석하고 샘플을 수정한 기록.",
+          "source": "Dailyroom 참고 분석 작업 요약",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "ultradedit/README.md",
+          "exists": false,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 14,
+      "media": [],
+      "documents": [],
+      "models": [],
+      "clips": [],
+      "coverage": "summary"
+    },
+    {
+      "id": "gauntlet",
+      "title": "3D Gauntlet",
+      "subtitle": "Make it. Measure it. Repair it.",
+      "category": "intelligence",
+      "folders": [
+        "gau"
+      ],
+      "stack": [
+        "Blender",
+        "LangGraph",
+        "Python"
+      ],
+      "description": "절차적 3D 에셋을 만들고 형상·공간·제약 조건을 측정한 뒤 국소 수정과 롤백을 수행하는 제작 시스템.",
+      "before": "그럴듯해 보이는 모델을 자동 생성",
+      "after": "결정적 검증과 증거 단계에 따른 진단·복구 루프",
+      "limitation": "README의 벤치마크는 당시 조건의 기록입니다. 후속 v5 보강이 전부 완료됐다는 주장은 하지 않습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-08-25",
+      "last": "2026-09-23",
+      "counts": {
+        "codex": 19,
+        "claude": 33
+      },
+      "events": [
+        {
+          "date": "2026-08-25",
+          "title": "여러 도구를 한 제작 루프로",
+          "body": "Claude·Codex를 연결하는 초기 워크플로우와 3D 작업 시작.",
+          "source": "Claude 요청 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": null,
+          "title": "Geometry부터 Game Asset까지",
+          "body": "형상, 접촉·간격, 모듈 제약과 내보내기 예산을 단계별 측정.",
+          "source": "gau / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": null,
+          "title": "측정할 수 없는 것은 모호함으로",
+          "body": "증거 품질에 따라 검증을 높이고 국소 수정·회귀·롤백을 구성.",
+          "source": "gau / README.md · v1.0",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-09-06",
+          "title": "v5 인수 감사",
+          "body": "인수 조건과 남은 보강 문제를 따로 감사한 기록.",
+          "source": "Gauntlet v5 감사 작업 요약",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "gau/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "gau/docs/v1.0.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 15,
+      "media": [],
+      "documents": [
+        "doc-10"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "rig",
+      "title": "VESNA Rig Lab",
+      "subtitle": "Giving a character movement.",
+      "category": "worlds",
+      "folders": [
+        "미연시",
+        "rig",
+        "live2d"
+      ],
+      "stack": [
+        "Blender",
+        "Rigging",
+        "Godot"
+      ],
+      "description": "Rin 캐릭터의 얼굴·몸 리깅, 포즈·물리·동작과 게임용 모델 변형을 반복 검토한 캐릭터 제작 실험.",
+      "before": "공유 모델 복사본에서 포즈·리그 검사",
+      "after": "얼굴 파츠, 동작과 GLB 팔 변형 검토",
+      "limitation": "미연시 상위 폴더 통계를 공유합니다. 깊게 굽힌 팔의 소매 압축 등 남은 문제가 기록되어 있습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-06-20",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 473,
+        "claude": 29
+      },
+      "events": [
+        {
+          "date": "2026-09-12",
+          "title": "움직임으로 드러나는 문제",
+          "body": "복사한 원본에서 포즈와 의상 물리, 관절 벌어짐을 확인하라는 요청.",
+          "source": "Claude 요청 기록 · rig",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-09-26",
+          "title": "팔 변형과 게임 모델 점검",
+          "body": "게임용 GLB의 본 중심·인사 각도를 조정하고 변형을 검토.",
+          "source": "팔 변형 검토 작업 요약",
+          "type": "verification"
+        },
+        {
+          "date": "2026-09-27",
+          "title": "Live2D 얼굴 파츠로 확장",
+          "body": "린 이미지를 Live2D로 옮기기 위한 자산 탐색·얼굴 파츠 작업 기록.",
+          "source": "Live2D 작업 요약",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "미연시/VESNA-Rig-Assistant",
+          "exists": true,
+          "kind": "로컬 소스"
+        },
+        {
+          "name": "live2d",
+          "exists": false,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": "evidence/rig-34.webp",
+      "index": 16,
+      "media": [
+        "ev-34",
+        "ev-35"
+      ],
+      "documents": [],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "study",
+      "title": "Study Lab",
+      "subtitle": "Learning, with the steps visible.",
+      "category": "systems",
+      "folders": [
+        "시허모ㅗㅗㅗㅗㅗㅗ"
+      ],
+      "stack": [
+        "PWA",
+        "Python",
+        "PDF"
+      ],
+      "description": "교과서와 문제 이미지를 확인하고 풀이·연습·채점·인쇄물을 연결하는 학습 작업 공간.",
+      "before": "문제 이미지와 교과서 범위 수집",
+      "after": "단계별 풀이, 학습 PWA와 인쇄 PDF 검수",
+      "limitation": "수업 자료·학생 정보·문제 원문을 사이트에 포함하지 않았습니다. 실제 휴대전화 사용 확인은 별도입니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-10-02",
+      "last": "2026-10-11",
+      "counts": {
+        "codex": 17,
+        "claude": 1
+      },
+      "events": [
+        {
+          "date": "2026-10-03",
+          "title": "문제와 풀이를 나누기",
+          "body": "문제 이미지 확인, 단계별 물리 설명과 연습·채점 구조를 정리.",
+          "source": "학습 자료 작업 요약",
+          "type": "recorded"
+        },
+        {
+          "date": null,
+          "title": "공부하는 PWA",
+          "body": "로컬 Codex 연결, 대화·학습 상태 보존과 휴대전화 접근 경로 구성.",
+          "source": "Study PWA 작업 요약",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-11",
+          "title": "출력물도 검사하기",
+          "body": "교과서 범위와 풀이 PDF의 원문 대조·페이지 렌더·검수를 수행한 기록.",
+          "source": "교과서·PDF QA 작업 요약",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "시허모ㅗㅗㅗㅗㅗㅗ/study-lab",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 17,
+      "media": [],
+      "documents": [
+        "doc-12"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "learn",
+      "title": "Claude Learn",
+      "subtitle": "Code it. Watch it happen.",
+      "category": "systems",
+      "folders": [
+        "coding"
+      ],
+      "stack": [
+        "Node.js",
+        "Godot",
+        "SSE"
+      ],
+      "description": "Claude Code 세션을 학습 기록으로 바꾸고 GDScript 연습을 실행 중인 Godot 무대와 연결한 학습 대시보드.",
+      "before": "세션과 연결되는 코딩 학습 프로그램 요청",
+      "after": "훅 기반 학습 기록, 튜터 컨텍스트와 Godot 핫리로드 무대",
+      "limitation": "README와 소스를 확인한 상태입니다. 이번 작업에서 실시간 연습을 재실행하지는 않았습니다.",
+      "tools": [
+        "Claude"
+      ],
+      "first": "2026-09-14",
+      "last": "2026-10-24",
+      "counts": {
+        "codex": 0,
+        "claude": 1
+      },
+      "events": [
+        {
+          "date": "2026-09-14",
+          "title": "세션이 학습 기록이 되도록",
+          "body": "Claude Code 세션을 코딩 학습과 연결하겠다는 최초 요청.",
+          "source": "Claude 요청 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-09-14",
+          "title": "시작과 종료를 간단하게",
+          "body": "폴더 안 start·stop 런처를 요청하고 README에 실행 흐름을 정리.",
+          "source": "claude-learn / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-09-14",
+          "title": "저장하면 게임이 반응하기",
+          "body": "Godot 무대와 대시보드의 레슨·검사 결과를 연결하는 연습 구조.",
+          "source": "claude-learn / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-24",
+          "title": "원본 학습 데이터와 분리해 UI 확인",
+          "body": "빈 임시 데이터로 대시보드와 실제 커리큘럼을 실행해 새로 캡처했습니다. 기존 학습 이력은 수정하지 않았습니다.",
+          "source": "로컬 앱 실행 / 별도 임시 데이터",
+          "type": "verification"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "coding/claude-learn/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/learn-dashboard.webp",
+      "index": 18,
+      "media": [
+        "learn-dashboard",
+        "learn-curriculum"
+      ],
+      "documents": [
+        "doc-11"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "saup",
+      "title": "Saup",
+      "subtitle": "The operations behind the storefront.",
+      "category": "systems",
+      "folders": [
+        "saup"
+      ],
+      "stack": [
+        "FastAPI",
+        "PostgreSQL",
+        "Next.js"
+      ],
+      "description": "주문·배송·클레임·정산과 공급사 입력을 관리하는 위탁판매 운영 기반.",
+      "before": "운영 흐름과 합성 데모 환경",
+      "after": "기능 마감 콘솔, 주문 XLSX 입력과 공급사 검토",
+      "limitation": "실제 마켓·결제·외부 송금 자동 연결이 완료됐다는 의미는 아닙니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-09-27",
+      "last": "2026-09-30",
+      "counts": {
+        "codex": 2,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-09-27",
+          "title": "운영 기능 마감 작업",
+          "body": "초기 설정부터 클레임·부분 환불·정산까지 마감 범위를 정리.",
+          "source": "saup / README.md",
+          "type": "implementation"
+        },
+        {
+          "date": null,
+          "title": "현실의 주문을 입력하기",
+          "body": "XLSX 미리보기·가져오기와 수동 원천 검증을 추가.",
+          "source": "saup / README.md · closure checkpoint",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-09-30",
+          "title": "공급사 연결의 경계 확인",
+          "body": "공급사 자료와 계정·연동 조건을 조사하고 실제 연결 여부를 구분.",
+          "source": "공급사 통합 조사 작업 요약",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "saup/README.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        },
+        {
+          "name": "saup/docs/functional-closeout.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": null,
+      "index": 19,
+      "media": [],
+      "documents": [
+        "doc-13"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "jobs",
+      "title": "Work Discovery",
+      "subtitle": "Finding where the work is.",
+      "category": "systems",
+      "folders": [
+        "money"
+      ],
+      "stack": [
+        "Python",
+        "RSS",
+        "Workflow"
+      ],
+      "description": "영상 편집과 AI 제작 업무를 찾고 자료·포트폴리오·지원 문안을 정리하는 구직·프리랜스 작업 체계.",
+      "before": "자동화로 수익을 만들 수 있는 경로 조사",
+      "after": "숏폼·롱폼 중심 공고 발견과 수동 검토 경로",
+      "limitation": "수익이나 채용 성과를 만들지 않았습니다. 연락처·지원 문안 원문·계정 정보는 제외했습니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-09-20",
+      "last": "2026-10-18",
+      "counts": {
+        "codex": 7,
+        "claude": 4
+      },
+      "events": [
+        {
+          "date": "2026-09-20",
+          "title": "가능한 일의 범위를 조사",
+          "body": "영상·문서·웹·이미지 등 AI와 함께 할 수 있는 일의 경로를 조사.",
+          "source": "Claude 요청 기록",
+          "type": "discovery"
+        },
+        {
+          "date": null,
+          "title": "발견과 지원을 분리",
+          "body": "RSS 기반 발견과 사람이 확인해야 하는 플랫폼을 구분.",
+          "source": "freelance-job-hunter 작업 요약",
+          "type": "implementation"
+        },
+        {
+          "date": "2026-10-18",
+          "title": "편집 중심으로 탐색 확대",
+          "body": "숏폼·롱폼 우선순위를 두고 더 넓은 제작 업무 경로도 유지.",
+          "source": "업무 탐색 작업 요약",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "money/02-도구/freelance-job-hunter",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 20,
+      "media": [],
+      "documents": [
+        "request-jobs"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "thermal",
+      "title": "Thermal × LLM",
+      "subtitle": "Measure before you conclude.",
+      "category": "lab",
+      "folders": [
+        "science"
+      ],
+      "stack": [
+        "Benchmark",
+        "Python",
+        "Sensors"
+      ],
+      "description": "열과 스로틀링, 로컬 LLM 실행의 관계를 실제 센서·실험 조건과 함께 관찰한 과학 탐구.",
+      "before": "온도와 실행 성능에 대한 질문",
+      "after": "실험 프로토콜·측정 실행·그래프와 발표 자료",
+      "limitation": "관찰 조건 밖의 인과관계로 일반화하지 않습니다. 센서 권한과 실제 스로틀링 여부를 구분합니다.",
+      "tools": [
+        "Codex",
+        "Claude"
+      ],
+      "first": "2026-08-26",
+      "last": "2026-09-21",
+      "counts": {
+        "codex": 1,
+        "claude": 1
+      },
+      "events": [
+        {
+          "date": "2026-08-26",
+          "title": "실험 작업 시작",
+          "body": "science 폴더의 Codex·Claude 작업 흔적 확인.",
+          "source": "세션 메타데이터",
+          "type": "discovery"
+        },
+        {
+          "date": null,
+          "title": "측정 조건을 더 엄밀하게",
+          "body": "aggressive 프로토콜 v1.1·v1.2와 실제 스로틀 확장 v1.3 문서를 보존.",
+          "source": "science 프로토콜 문서",
+          "type": "implementation"
+        },
+        {
+          "date": null,
+          "title": "관찰을 발표 자료로",
+          "body": "실험 기록과 그래프를 바탕으로 발표 구성과 결과 해석을 검토.",
+          "source": "열·LLM 발표 작업 요약 · 단계 날짜 미확정",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "science/thermal_llm_actual_throttle_extension_v1.3.md",
+          "exists": true,
+          "kind": "로컬 문서"
+        }
+      ],
+      "image": "evidence/thermal-30.webp",
+      "index": 21,
+      "media": [
+        "ev-30",
+        "ev-31"
+      ],
+      "documents": [
+        "doc-15"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "ranklab",
+      "title": "RankLab",
+      "subtitle": "Find the moment that matters.",
+      "category": "motion",
+      "folders": [
+        "shorts 22"
+      ],
+      "stack": [
+        "Video AI",
+        "FFmpeg",
+        "Web UI"
+      ],
+      "description": "실제 영상의 재미있는 구간을 이해하고 TOP5 쇼츠를 구성하려는 AI 랭킹 편집 도구 실험.",
+      "before": "클립 분석부터 랭킹·렌더까지의 기획",
+      "after": "방향 재검토 후 초기안 폐기·작업 중단",
+      "limitation": "초기 방향이 요청과 맞지 않아 폐기됐으며, 현재 프로젝트 폴더는 비어 있습니다. 작동하는 앱으로 소개하지 않습니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-10-17",
+      "last": "2026-10-19",
+      "counts": {
+        "codex": 1,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-10-17",
+          "title": "영상 이해가 먼저",
+          "body": "움직임·음량만이 아니라 맥락과 반전으로 재미를 판단하도록 기획.",
+          "source": "Codex 최초 요청 기록",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-10-19",
+          "title": "초기안 폐기",
+          "body": "초기 파이프라인이 거절되어 휴지통으로 이동됐다는 과거 작업 요약과 비어 있는 폴더를 대조.",
+          "source": "RankLab 작업 요약 / 로컬 폴더 확인",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "shorts 22",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 22,
+      "media": [],
+      "documents": [
+        "request-ranklab"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "sangse",
+      "title": "Detail Studio",
+      "subtitle": "From product facts to a visual story.",
+      "category": "motion",
+      "folders": [
+        "SANGSE"
+      ],
+      "stack": [
+        "AI imagery",
+        "Product research",
+        "Layout"
+      ],
+      "description": "제품 사실·사용 장면·시각 구성과 검수를 연결하는 AI 상세페이지 제작 워크플로우.",
+      "before": "AI 상세페이지를 더 잘 만드는 제작법 요청",
+      "after": "IKEA VARIERA 샘플과 자료·검수 흐름",
+      "limitation": "샘플과 절차의 기록입니다. 판매 성과나 제품별 상업적 권한을 확정하지 않습니다.",
+      "tools": [
+        "Codex"
+      ],
+      "first": "2026-10-18",
+      "last": "2026-10-18",
+      "counts": {
+        "codex": 1,
+        "claude": 0
+      },
+      "events": [
+        {
+          "date": "2026-10-18",
+          "title": "사실과 표현의 흐름 설계",
+          "body": "제품 자료 확인, 시각 구성, 샘플 제작과 검수의 단계를 나눔.",
+          "source": "Codex 최초 요청 / 상세페이지 작업 요약",
+          "type": "discovery"
+        },
+        {
+          "date": null,
+          "title": "VARIERA 샘플 제작",
+          "body": "IKEA VARIERA를 예시로 상세페이지 제작 흐름과 결과물을 정리.",
+          "source": "AI 상세페이지 샘플 작업 요약",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "SANGSE",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": "evidence/sangse-27.webp",
+      "index": 23,
+      "media": [
+        "ev-27",
+        "ev-28",
+        "ev-29"
+      ],
+      "documents": [
+        "doc-14"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "visual"
+    },
+    {
+      "id": "geto",
+      "title": "GETO / Sindohs",
+      "subtitle": "An OS-like place for games.",
+      "category": "systems",
+      "folders": [
+        "새 폴더"
+      ],
+      "stack": [
+        "Desktop EXE",
+        "Leaderboard",
+        "Game launcher"
+      ],
+      "description": "PC방 OS 같은 게임 중심 데스크톱 화면과 리더보드를 만들려던 프로젝트. 두 작업 폴더와 요청 기록이 남아 있습니다.",
+      "before": "블록아웃에서 PC방 OS 스타일로 전환 요청",
+      "after": "리더보드·로그인·독립 EXE 배포를 반복 요청한 이력",
+      "limitation": "소스 본문과 README는 현재 폴더에서 발견하지 못했습니다. 배포 폴더 흔적과 요청만으로 기능 완료를 확정하지 않습니다.",
+      "tools": [
+        "Claude"
+      ],
+      "first": "2026-09-03",
+      "last": "2026-09-04",
+      "counts": {
+        "codex": 0,
+        "claude": 8
+      },
+      "events": [
+        {
+          "date": "2026-09-03",
+          "title": "게임이 중심인 데스크톱",
+          "body": "GETO를 PC방 OS 스타일로 바꾸고 기존 게임 중심 화면을 만들라는 요청.",
+          "source": "Claude 요청 기록 · 새 폴더",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "게임별 리더보드와 로그인",
+          "body": "게임 데이터를 나눠 리더보드를 붙이고 로그인 경로를 통합하는 요청.",
+          "source": "Claude 요청 기록",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-09-03",
+          "title": "다른 컴퓨터에서도 실행하기",
+          "body": "HTML 대신 EXE 배포, 누락 런타임과 애니메이션 속도 문제를 다룬 요청.",
+          "source": "Claude 요청 기록",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "새 폴더/geto-pcbang",
+          "exists": true,
+          "kind": "로컬 소스"
+        },
+        {
+          "name": "새 폴더/sindohs-helloworld/dist",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 24,
+      "media": [],
+      "documents": [
+        "request-geto"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "spatial",
+      "title": "Spatial Social",
+      "subtitle": "A room for voices and shared screens.",
+      "category": "worlds",
+      "folders": [
+        "새 폴더 (2)"
+      ],
+      "stack": [
+        "3D space",
+        "Voice chat",
+        "Screen sharing"
+      ],
+      "description": "3D 공간 안에서 음성 채팅, 밈·개인 이모티콘, 화면 공유를 함께 쓰려던 소셜 공간 실험.",
+      "before": "게임 안 화면 공유와 개인 이모티콘에 대한 질문",
+      "after": "음성·밈·화면 공유를 3D MVP 범위로 구체화",
+      "limitation": "현재는 의존성 폴더와 Claude 요청 기록만 확인됩니다. 실제 원격 접속·통화가 검증된 것으로 소개하지 않습니다.",
+      "tools": [
+        "Claude"
+      ],
+      "first": "2026-09-06",
+      "last": "2026-09-14",
+      "counts": {
+        "codex": 0,
+        "claude": 4
+      },
+      "events": [
+        {
+          "date": "2026-09-06",
+          "title": "같은 화면을 함께 보기",
+          "body": "디스코드 방식의 화면 공유와 개인 이모티콘을 게임에 적용하고 싶다는 요청.",
+          "source": "Claude 요청 기록",
+          "type": "discovery"
+        },
+        {
+          "date": "2026-09-06",
+          "title": "3D 공간의 세 가지 MVP",
+          "body": "음성 채팅, 밈 표시와 화면 공유를 초기 범위로 정함.",
+          "source": "Claude 요청 기록",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-09-06",
+          "title": "서로 다른 장소로 확장",
+          "body": "다른 컴퓨터와 다른 장소에서의 접속 가능성을 검토하는 후속 요청.",
+          "source": "Claude 요청 기록",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "새 폴더 (2)",
+          "exists": true,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 25,
+      "media": [],
+      "documents": [
+        "request-spatial"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    },
+    {
+      "id": "minecraft",
+      "title": "Gameplay Shorts Lab",
+      "subtitle": "Make the footage feel like play.",
+      "category": "motion",
+      "folders": [
+        "youtube"
+      ],
+      "stack": [
+        "Gameplay capture",
+        "Shorts",
+        "Subtitles"
+      ],
+      "description": "게임 플레이처럼 보이는 영상과 빠른 자막 리듬을 만들려던 초기 영상 자동화 실험.",
+      "before": "설치와 영상 생성 작업",
+      "after": "몬스터 유도처럼 보이는 결과와 느린 움직임에 대한 피드백",
+      "limitation": "현재 원본 프로젝트 폴더를 찾지 못했습니다. 요청 기록으로 복원한 실험이며 완성된 제작 시스템이라는 뜻은 아닙니다.",
+      "tools": [
+        "Claude"
+      ],
+      "first": "2026-09-09",
+      "last": "2026-09-09",
+      "counts": {
+        "codex": 0,
+        "claude": 2
+      },
+      "events": [
+        {
+          "date": "2026-09-09",
+          "title": "영상의 실제감 다시 보기",
+          "body": "영상이 실제 플레이처럼 보이지 않는다는 피드백과 빠른 자막 스타일 요청.",
+          "source": "Claude 요청 기록 · youtube",
+          "type": "recorded"
+        },
+        {
+          "date": "2026-09-09",
+          "title": "움직임과 편집 속도 조정",
+          "body": "느린 게임 움직임에 배속을 적용하는 방향을 논의한 기록.",
+          "source": "Claude 요청 기록",
+          "type": "recorded"
+        }
+      ],
+      "evidence": [
+        {
+          "name": "youtube",
+          "exists": false,
+          "kind": "로컬 소스"
+        }
+      ],
+      "image": null,
+      "index": 26,
+      "media": [],
+      "documents": [
+        "request-minecraft"
+      ],
+      "models": [],
+      "clips": [],
+      "coverage": "document"
+    }
+  ],
+  "otherFolders": [
+    "쿨쿨",
+    "blender",
+    "시험. 워킇플로우 codex",
+    "it"
+  ],
+  "recordSnapshotAt": "2026-10-19",
+  "proof": {
+    "auditedAt": "2026-10-24",
+    "media": [
+      {
+        "project": "vesna",
+        "title": "Free Life 카페 화면",
+        "kind": "capture",
+        "version": "Free Life",
+        "date": "2026-09-27",
+        "note": "",
+        "id": "ev-00",
+        "src": "evidence/vesna-00.webp",
+        "source": "미연시/CafeVesna/qa/free_life/01_cafe.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "vesna",
+        "title": "생활 수첩과 약속",
+        "kind": "capture",
+        "version": "Free Life",
+        "date": "2026-09-27",
+        "note": "",
+        "id": "ev-01",
+        "src": "evidence/vesna-01.webp",
+        "source": "미연시/CafeVesna/qa/free_life/02_calendar.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "vesna",
+        "title": "수정 전 · 추출 시점",
+        "kind": "capture",
+        "version": "시점 수정 전",
+        "date": "2026-10-19",
+        "note": "",
+        "id": "ev-02",
+        "src": "evidence/vesna-02.webp",
+        "source": "미연시/CafeVesna/qa/cooking_fp_20261019/before/03_brewing.png",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "project": "vesna",
+        "title": "수정 후 · 추출 게이지와 가까운 시점",
+        "kind": "capture",
+        "version": "시점 수정 후",
+        "date": "2026-10-19",
+        "note": "",
+        "id": "ev-03",
+        "src": "evidence/vesna-03.webp",
+        "source": "미연시/CafeVesna/qa/cooking_fp_20261019/after/05_brewing_gauge_closeup.png",
+        "width": 1600,
+        "height": 900
+      },
+      {
+        "project": "vesna",
+        "title": "영업 루프 수정 전",
+        "kind": "capture",
+        "version": "영업 수정 전",
+        "date": "2026-10-19",
+        "note": "",
+        "id": "ev-04",
+        "src": "evidence/vesna-04.webp",
+        "source": "미연시/CafeVesna/qa/business_20261019/before_00_open.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "vesna",
+        "title": "주문 줄과 주문표",
+        "kind": "capture",
+        "version": "영업 수정 후",
+        "date": "2026-10-19",
+        "note": "",
+        "id": "ev-05",
+        "src": "evidence/vesna-05.webp",
+        "source": "미연시/CafeVesna/qa/business_20261019/after_01_queue_and_orders.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "vesna",
+        "title": "손님이 앉아 마시는 단계",
+        "kind": "capture",
+        "version": "영업 수정 후",
+        "date": "2026-10-19",
+        "note": "",
+        "id": "ev-06",
+        "src": "evidence/vesna-06.webp",
+        "source": "미연시/CafeVesna/qa/business_20261019/after_04_seated_drinking.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "lastlight",
+        "title": "초기 Style A 모델의 Studio 확인",
+        "kind": "capture",
+        "version": "Style A v01",
+        "date": null,
+        "note": "",
+        "id": "ev-07",
+        "src": "evidence/lastlight-07.webp",
+        "source": "ROB/art/style_a_v01/renders/Studio_day.png",
+        "width": 1072,
+        "height": 635
+      },
+      {
+        "project": "lastlight",
+        "title": "로비 UI 개편 기록",
+        "kind": "capture",
+        "version": "v2 로비",
+        "date": "2026-10-15",
+        "note": "",
+        "id": "ev-08",
+        "src": "evidence/lastlight-08.webp",
+        "source": "ROB/v2/qa/combat_input_20261015/lobby_ui.png",
+        "width": 1072,
+        "height": 677
+      },
+      {
+        "project": "lastlight",
+        "title": "생존 수치와 5칸 핫바",
+        "kind": "capture",
+        "version": "v2 매치",
+        "date": "2026-10-15",
+        "note": "",
+        "id": "ev-09",
+        "src": "evidence/lastlight-09.webp",
+        "source": "ROB/v2/qa/combat_input_20261015/match_ui.png",
+        "width": 1274,
+        "height": 677
+      },
+      {
+        "project": "lastlight",
+        "title": "모드 선택과 대기열",
+        "kind": "capture",
+        "version": "v2 모드 선택",
+        "date": "2026-10-15",
+        "note": "",
+        "id": "ev-10",
+        "src": "evidence/lastlight-10.webp",
+        "source": "ROB/v2/qa/combat_input_20261015/mode_picker.png",
+        "width": 1072,
+        "height": 677
+      },
+      {
+        "project": "lastlight",
+        "title": "제작한 맵의 전체 렌더",
+        "kind": "render",
+        "version": "맵 v08",
+        "date": null,
+        "note": "",
+        "id": "ev-11",
+        "src": "evidence/lastlight-11.webp",
+        "source": "ROB/art/map_v08/renders/map_overview.png",
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "project": "pets",
+        "title": "초기 프로토타입 검수 화면",
+        "kind": "capture",
+        "version": "초기 QA",
+        "date": null,
+        "note": "",
+        "id": "ev-12",
+        "src": "evidence/pets-12.webp",
+        "source": "ROB/pet_realms/qa/preview.jpg",
+        "width": 1072,
+        "height": 635
+      },
+      {
+        "project": "pets",
+        "title": "환경 v03 · 정원",
+        "kind": "render",
+        "version": "환경 v03",
+        "date": null,
+        "note": "",
+        "id": "ev-13",
+        "src": "evidence/pets-13.webp",
+        "source": "ROB/pet_realms/art/environment_v03/renders/meadow.png",
+        "width": 1800,
+        "height": 1400
+      },
+      {
+        "project": "pets",
+        "title": "환경 v04 · 정원 재구성",
+        "kind": "render",
+        "version": "환경 v04",
+        "date": null,
+        "note": "",
+        "id": "ev-14",
+        "src": "evidence/pets-14.webp",
+        "source": "ROB/pet_realms/art/environment_v04/renders/meadow.png",
+        "width": 1800,
+        "height": 1500
+      },
+      {
+        "project": "pets",
+        "title": "환경 v04 · 소원나무",
+        "kind": "render",
+        "version": "환경 v04",
+        "date": null,
+        "note": "",
+        "id": "ev-15",
+        "src": "evidence/pets-15.webp",
+        "source": "ROB/pet_realms/art/environment_v04/renders/wish_tree.png",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "project": "pets",
+        "title": "환경 v04 · 천문 신전",
+        "kind": "render",
+        "version": "환경 v04",
+        "date": null,
+        "note": "",
+        "id": "ev-16",
+        "src": "evidence/pets-16.webp",
+        "source": "ROB/pet_realms/art/environment_v04/renders/observatory.png",
+        "width": 1600,
+        "height": 1200
+      },
+      {
+        "project": "horror",
+        "title": "Roblox 포트 · 복도",
+        "kind": "capture",
+        "version": "초기 포트",
+        "date": "2026-10-09",
+        "note": "",
+        "id": "ev-17",
+        "src": "evidence/horror-17.webp",
+        "source": "horrorgames/roblox/build/gallery_20261009/02_corridor.png",
+        "width": 1072,
+        "height": 675
+      },
+      {
+        "project": "horror",
+        "title": "Roblox 포트 · 방",
+        "kind": "capture",
+        "version": "초기 포트",
+        "date": "2026-10-09",
+        "note": "",
+        "id": "ev-18",
+        "src": "evidence/horror-18.webp",
+        "source": "horrorgames/roblox/build/gallery_20261009/03_room.png",
+        "width": 1072,
+        "height": 675
+      },
+      {
+        "project": "horror",
+        "title": "Roblox 포트 · 회수 구역",
+        "kind": "capture",
+        "version": "초기 포트",
+        "date": "2026-10-09",
+        "note": "",
+        "id": "ev-19",
+        "src": "evidence/horror-19.webp",
+        "source": "horrorgames/roblox/build/gallery_20261009/05_cargo.png",
+        "width": 1072,
+        "height": 675
+      },
+      {
+        "project": "blackfire",
+        "title": "타이틀과 진입 흐름",
+        "kind": "capture",
+        "version": "smoke 캡처",
+        "date": null,
+        "note": "",
+        "id": "ev-20",
+        "src": "evidence/blackfire-20.webp",
+        "source": "JIHOGAY/.smoke/00_title.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "blackfire",
+        "title": "첫 보스전",
+        "kind": "capture",
+        "version": "smoke 캡처",
+        "date": null,
+        "note": "",
+        "id": "ev-21",
+        "src": "evidence/blackfire-21.webp",
+        "source": "JIHOGAY/.smoke/02_boss1_start.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "blackfire",
+        "title": "대화 장면",
+        "kind": "capture",
+        "version": "smoke 캡처",
+        "date": null,
+        "note": "",
+        "id": "ev-22",
+        "src": "evidence/blackfire-22.webp",
+        "source": "JIHOGAY/.smoke/04_dialogue.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "project": "jarvis",
+        "title": "도구 실패를 보여주는 UI",
+        "kind": "capture",
+        "version": "실패 표시 검수",
+        "date": null,
+        "note": "",
+        "id": "ev-24",
+        "src": "evidence/jarvis-24.webp",
+        "source": "local ai/jarvis/reports/tool-failure-ui/failure.png",
+        "width": 1100,
+        "height": 850
+      },
+      {
+        "project": "jarvis",
+        "title": "아바타 wave 렌더 확인",
+        "kind": "capture",
+        "version": "VRM 검수",
+        "date": "2026-10-17",
+        "note": "",
+        "id": "ev-25",
+        "src": "evidence/jarvis-25.webp",
+        "source": "local ai/jarvis/reports/avatar-vrm-check/wave.png",
+        "width": 760,
+        "height": 900
+      },
+      {
+        "project": "jarvis",
+        "title": "아바타 tilt 렌더 확인",
+        "kind": "capture",
+        "version": "VRM 검수",
+        "date": "2026-10-17",
+        "note": "",
+        "id": "ev-26",
+        "src": "evidence/jarvis-26.webp",
+        "source": "local ai/jarvis/reports/avatar-vrm-check/tilt.png",
+        "width": 760,
+        "height": 900
+      },
+      {
+        "project": "sangse",
+        "title": "상세페이지 V4 첫 화면",
+        "kind": "design",
+        "version": "V4",
+        "date": null,
+        "note": "",
+        "id": "ev-27",
+        "src": "evidence/sangse-27.webp",
+        "source": "SANGSE/sample-variera-v4/renders/mobile-artwork-390-first.jpg",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "project": "sangse",
+        "title": "상세페이지 V5 첫 화면",
+        "kind": "design",
+        "version": "V5",
+        "date": "2026-10-18",
+        "note": "",
+        "id": "ev-28",
+        "src": "evidence/sangse-28.webp",
+        "source": "SANGSE/sample-variera-v5/renders/mobile-first-390.jpg",
+        "width": 390,
+        "height": 844
+      },
+      {
+        "project": "sangse",
+        "title": "최종 상세 10컷의 조판",
+        "kind": "design",
+        "version": "V5",
+        "date": "2026-10-18",
+        "note": "",
+        "id": "ev-29",
+        "src": "evidence/sangse-29.webp",
+        "source": "SANGSE/sample-variera-v5/renders/contact-sheet.jpg",
+        "width": 1400,
+        "height": 1430
+      },
+      {
+        "project": "thermal",
+        "title": "동일 조건의 cold / hot 관찰",
+        "kind": "chart",
+        "version": "실험 기록",
+        "date": "2026-08-26",
+        "note": "",
+        "id": "ev-30",
+        "src": "evidence/thermal-30.webp",
+        "source": "science/deliverables/thermal_throttling_evidence_pack_20260826/charts/03_LLM_Cold_vs_Hot.png",
+        "width": 1900,
+        "height": 742
+      },
+      {
+        "project": "thermal",
+        "title": "온도와 클록 측정 그래프",
+        "kind": "chart",
+        "version": "실험 기록",
+        "date": "2026-08-26",
+        "note": "",
+        "id": "ev-31",
+        "src": "evidence/thermal-31.webp",
+        "source": "science/deliverables/thermal_throttling_evidence_pack_20260826/charts/09_Temperature_Versus_Clock.png",
+        "width": 1591,
+        "height": 637
+      },
+      {
+        "project": "go2",
+        "title": "짧은 실험의 학습 곡선",
+        "kind": "chart",
+        "version": "평가·학습 기록",
+        "date": "2026-10-02",
+        "note": "",
+        "id": "ev-32",
+        "src": "evidence/go2-32.webp",
+        "source": "issac_sim/analysis/short_sweep_20261002/short_learning_curves.png",
+        "width": 1760,
+        "height": 1120
+      },
+      {
+        "project": "go2",
+        "title": "최종 정책의 대표 실행 장면",
+        "kind": "capture",
+        "version": "C0 대표 실행",
+        "date": "2026-10-18",
+        "note": "",
+        "id": "ev-33",
+        "src": "evidence/go2-33.webp",
+        "source": "issac_sim/analysis/final_go2_20h_20261017/representative_contact_sheet.jpg",
+        "width": 1920,
+        "height": 360
+      },
+      {
+        "project": "rig",
+        "title": "리그 도구의 초기 화면",
+        "kind": "capture",
+        "version": "리그 UI v02",
+        "date": null,
+        "note": "",
+        "id": "ev-34",
+        "src": "evidence/rig-34.webp",
+        "source": "미연시/VESNA-Rig-Assistant/tests/ui-v02.jpg",
+        "width": 1500,
+        "height": 1052
+      },
+      {
+        "project": "rig",
+        "title": "리그 도구의 후속 화면",
+        "kind": "capture",
+        "version": "리그 UI 검수",
+        "date": null,
+        "note": "",
+        "id": "ev-35",
+        "src": "evidence/rig-35.webp",
+        "source": "미연시/VESNA-Rig-Assistant/tests/ui-final.jpg",
+        "width": 1500,
+        "height": 982
+      },
+      {
+        "id": "nerulio-home",
+        "project": "nerulio",
+        "title": "로컬 작업실 진입 화면",
+        "kind": "capture",
+        "version": "로컬 실행 · 10.24",
+        "date": "2026-10-24",
+        "src": "evidence/nerulio-home.webp",
+        "source": "2026-10-24 로컬 실행 / nerulio-home.png",
+        "width": 1265,
+        "height": 712,
+        "note": "2026-10-24에 새로 캡처한 로컬 실행 화면. 운영 사이트 캡처는 아닙니다."
+      },
+      {
+        "id": "nerulio-editor",
+        "project": "nerulio",
+        "title": "기본 이미지 편집 화면",
+        "kind": "capture",
+        "version": "로컬 실행 · 10.24",
+        "date": "2026-10-24",
+        "src": "evidence/nerulio-editor.webp",
+        "source": "2026-10-24 로컬 실행 / nerulio-editor.png",
+        "width": 1265,
+        "height": 712,
+        "note": "기본 제공 샘플을 불러온 실제 앱. 사용자 원본 파일은 사용하지 않았습니다."
+      },
+      {
+        "id": "nerulio-pixel",
+        "project": "nerulio",
+        "title": "이미지 → 32×32 에셋 결과",
+        "kind": "capture",
+        "version": "로컬 실행 · 10.24",
+        "date": "2026-10-24",
+        "src": "evidence/nerulio-pixel.webp",
+        "source": "2026-10-24 로컬 실행 / nerulio-pixel.png",
+        "width": 1265,
+        "height": 712,
+        "note": "샘플의 실제 도트화 결과. 과거 개발 버전이 아니라 현재 로컬 소스의 기능 흐름입니다."
+      },
+      {
+        "id": "learn-dashboard",
+        "project": "learn",
+        "title": "학습 대시보드",
+        "kind": "capture",
+        "version": "로컬 실행 · 10.24",
+        "date": "2026-10-24",
+        "src": "evidence/learn-dashboard.webp",
+        "source": "2026-10-24 로컬 실행 / learn-dashboard.png",
+        "width": 1265,
+        "height": 712,
+        "note": "원본 학습 데이터와 분리한 빈 데이터로 실행. 0건 표시는 실제 학습 이력이 아닙니다."
+      },
+      {
+        "id": "learn-curriculum",
+        "project": "learn",
+        "title": "Godot 커리큘럼과 연습 무대",
+        "kind": "capture",
+        "version": "로컬 실행 · 10.24",
+        "date": "2026-10-24",
+        "src": "evidence/learn-curriculum.webp",
+        "source": "2026-10-24 로컬 실행 / learn-curriculum.png",
+        "width": 1265,
+        "height": 712,
+        "note": "원본 학습 데이터와 분리한 실행 화면. Godot 게임 연결은 이번에 재실행하지 않았습니다."
+      }
+    ],
+    "documents": [
+      {
+        "id": "doc-00",
+        "project": "vesna",
+        "source": "미연시/CafeVesna/qa/cooking_fp_20261019/README.md",
+        "title": "보기·스팀·들고 놓기: 문제와 수정의 근거",
+        "lineStart": 1,
+        "lineEnd": 17,
+        "excerpt": "# 1인칭 조리 쉽게 — 보기 · 스팀 · 들고 놓기 (2026-10-19)\n\n사용자 원문: *\"실제 게임플레이 조작(특히 1인칭 시점에서 커피 만드는게 잘 안보인다. 스팀을 쓰기 어렵다. 손에 뭘 들고 움직이거나\n자유롭게 내려놓고 들고 하기가 어렵다는 문제가 있음\"*. 범위는 사이클 조리(메인 메뉴 → Cafe Play → 작업대 → COOKING_FP)이고,\n편집기·영업 경로는 바꾸지 않았다(`cafe_bounded=false` / `runtime.cycle()` 밖).\n\n## 바뀐 것\n\n| 문제 | 플레이어가 이제 하는 것 | 코드 |\n|---|---|---|\n| 1. 잘 안 보인다 | 조리 카메라가 치비의 실제 눈(바닥 1.21 m) **위 0.30 m · 뒤 0.24 m** 의 바리스타 자리에 선다 — 머신 전체·컵 안·상판을 내려다본다. 막히면 그만큼 눈 쪽으로 당긴다. 분쇄·추출·스팀을 시작하면 그 자리로 시선이 가고 화각이 좁아진다(분쇄 52° · 추출 50° · 스팀 46°, 끝나면 70°). 피처로 컵을 누르면 컵을 본다. 작업 지점에 도착했을 때 대상이 이미 화면 가운데 70 % 안이면 시선을 돌리지 않는다. 조리 카드 아래에 **진행 게이지**(분쇄 g · 추출 g/초 · 스팀 °C/거품 · 우유·온수 ml · 붓기 ml, 목표 구간 초록·넘으면 주황). 조리 카드는 이제 손에 든 컵 → 추출 중인 컵 순으로 본다(예전에는 추출 중에도 에스프레소 0 %). DOF 먼 쪽 시작 0.95 → 1.25 m. | `camera/camera_controller.gd`(`_work_view_*`, `work_view_point`, `set_work_zoom`), `bar/bar_controller.gd`(`_frame`, `gauge`), `cycle/process_gauge.*`, `cycle/cycle_hud.*`, `first_person_coffee.gd`(`_refresh_gauge`, `_card_cup_id`, `_look_at`) |\n| 2. 스팀이 어렵다 | 우유 든 피처를 들고 **완드를 한 번 클릭** → 자동 스팀. 피처는 예전처럼 완드 밑에 저절로 들린다. 팁은 주문 레시피 거품 목표 가운데까지 얕게(공기 넣기), 그다음 깊게(롤링) 저절로 옮기고, 레시피 온도 구간 가운데 +1 °C(라테 61 °C)에서 **저절로 멈춘다**. 누르고 있어도 된다(길게 누르다 떼면 멈춤). 다시 클릭하면 정지. 스팀 중 그룹 버튼 클릭은 스팀을 끊지 않고 추출 시작·정지만 한다. 휠을 굴리면 그 스팀은 손 조절(자동 정지 없음, 게이지가 경고). 소리: 공기 넣기 '치익'(고역 잡음)·롤링 '쉬이'(저역)·완료 '띵' — 파일이 없어서 생성한다. 판정은 그대로 피처의 `milk_temp_c·foam·texture`. | `bar/bar_controller.gd`(`tip_depth` 세터·`auto_tip`·`_auto_tip`·`steam_targets`·`pointer_up`·`stop_latched`·`latched_press`), `bar/steam_audio.gd`, `first_person_coffee.release(from_pointer)`, `editor/input_router.gd`(떼기 = `release(true)`) |\n| 3. 들고 놓기가 어렵다 | 들고 상판·받침을 가리키면 **놓일 자리에 반투명 미리보기 + 노란 고리**가 뜨고, 클릭하면 **정확히 그 칸**에 놓인다(미리보기와 누름이 같은 함수 `drop_location`). 빈손으로 물건을, 들고 기구 부위(완드·버튼·그룹)를 가리키면 **테두리 강조**. 우유 든 피처로 컵을 **누르고 있기만 하면** 피처가 거리와 상관없이 그 컵 입구 위로 들려 와서 기울고 붓는다(예전: 주둥이가 14 cm 안이어야 했고 손 위치에서는 끌어 와야 했다). 손의 피처가 컵 앞을 가려도 뒤의 컵을 누른 것으로 본다. 손동작·보행 중 우클릭 내려놓기는 거절하지 않고 예약. 그라인더 다이얼은 **Shift 없이** 왼쪽 반 = 곱게, 오른쪽 반 = 굵게, 다이얼 위 휠도 된다. | `first_person_coffee.gd`(`drop_location`, `_pointer_feedback`, `_begin_pour`, `put_down` 예약, `wheel`), `bar/place_preview.gd`, `bar/hover_highlight.gd`, `direct_tool_motion.gd`(`pour_target`, `_assist`), `bar/bar_controller.gd`(`place_target`, `part_view`, `dial_wheel`, `_dial_step`) |\n\n## 측정 (measured) — `sandbox/tests/test_cooking_fp_ease.gd` (24 checks, 0 failures)\n\n- **카메라**: 눈 (−0.758, 1.211, −2.276) → 카메라 (−0.792, 1.511, −2.039), 올림 0.300 m · 뒤 0.240 m, FOV 70°.",
+        "sha256": "6ede05c0f7d5d5293c44e01dcfd91dcbf796cd5762287c053f5617afc0b25b36",
+        "kind": "document"
+      },
+      {
+        "id": "doc-01",
+        "project": "vesna",
+        "source": "미연시/CafeVesna/qa/business_20261019/README.md",
+        "title": "대화 사이클에서 실제 영업 흐름으로",
+        "lineStart": 1,
+        "lineEnd": 23,
+        "excerpt": "# 카페 플레이 — 실제 가게 안 영업처럼 (2026-10-19)\n\n사용자 요청 원문: *\"실제 가게 안 영업처럼 해야할거같고\"*\n\n예전 Cafe Play: 히로인 치비 하나 → VN 대화 → 음료 요청 → 1인칭 제조 → 전달로 끝났다. 관찰 시점의 가게에는\n히로인 둘(actor_1·actor_rin)만 앉아 있었다(`before_*.png`, 60초 동안 액터 3, 손님 0 — measured).\n\n이번 작업 뒤: 관찰 시점의 카페가 영업 중인 가게처럼 돈다. 히로인 경로(클릭 → 메뉴 → VN → 요청)는 그대로다.\n\n## 플레이하면 이렇게 된다 (기본 프로필, 6분 측정 — `soak` 프로브, headless)\n\n플레이어 대신 60초마다 주문 하나를 완성 칸에 놓았다. 숫자는 measured(프로브 로그), 화면은 아래 캡처.\n\n| 시각 | 가게 |\n|---|---|\n| T+0s (오전 9:05) | 첫 손님이 서쪽 출입문 안쪽(레이아웃 문 엔티티에서 읽음)에 들어와 계산대 줄로 간다 |\n| T+15s | 계산대(카운터 끝 손님 쪽)에서 주문·선결제 → 주문표에 `#1 에스프레소 · 0:12` → 바 건너편 픽업 대기 자리로 간다 |\n| T+60s | 플레이어가 완성 칸에 놓은 잔이 1인칭 판정(drink_quality 100점)을 받고 `#1 나왔습니다` → 손님이 걸어와 직접 집는다 → 팁 800원 |\n| T+76s | 그 손님은 빈 자리에 앉아 마신다(☕, sip 3번). 두 번째 손님이 줄에 서 있다 |\n| T+106s | 다 마신 손님이 테이블에 잔을 두고 문으로 나간다. 빈 잔은 75초 뒤 치워진다 |\n| … 6분 | 손님 7명 입장, 주문 7, 전달 5, 나간 손님 0, 돌아간 손님 0, 매출 23,500원 + 팁 4,400원, 만족 평균 100% |\n\n하루: 오전 9:00 개점 → 오후 9:00 마감(새 손님 없음, 남은 손님만) → 모두 나가면 정산 줄(`after_07_day_summary.png`) → 다음 날",
+        "sha256": "c17ff4c52180b49d540564e24a168e0e599613a5e812e6a5bc3f29d210c65225",
+        "kind": "document"
+      },
+      {
+        "id": "doc-02",
+        "project": "lastlight",
+        "source": "ROB/v2/qa/combat_input_20261015/REPORT.md",
+        "title": "UI·입력 변경과 실제 실행 확인",
+        "lineStart": 13,
+        "lineEnd": 34,
+        "excerpt": "\n- 기본 Backpack 핫바 중복 제거, Ctrl 마우스 잠금, C 슬라이딩 유지, 카메라 최대 거리 18.\n- 공격 중 이동/카메라 방향 전환, 공격 범위 축소 및 공격 속도 완화, 무기 미리보기의 캐릭터 대체 표시 수정.\n- 실제 애니메이션 관절 갱신에 맞춘 맨손 공격, 도구·자원 손 표시. 신규 인벤토리는 계속 비어 있다.\n- 손 제작 나무 곡괭이는 통나무 2개로 제작 가능. 맨손 벌목 → 통나무 → 곡괭이 → 돌 채굴 경로 복구.\n- 보스 표지 거리와 가림 처리, 안개 너머 기본 천체 표시 제거. 모닥불 화면/가장자리 위치 표시를 작게 축소.\n- PvE 보호 영역은 맵 벽까지의 직선거리를 기준으로 모닥불 14레벨에 따라 확장. 서버와 안개가 같은 계산을 사용한다.\n- 로비는 왼쪽 메뉴, 하단 파티/플레이/연습, 모드 선택 카드 구조로 개편. 인게임은 좌하단 생존 수치, 해금된 5칸 핫바, 간결한 우측 조작 안내로 정리.\n- BedWars·99 Nights의 공개 화면에서 정보 배치를 참고했다. 참고 이미지 자산은 게임에 복사하지 않았다.\n\n## 검증과 저장\n\n- 순수 Luau 검증 35개 파일 통과(`tests.json`). 이후 UI 수정 파일 컴파일과 관련 로비 검사 재실행 성공.\n- Studio 실제 실행: 공격 방향 복원, 무기 8종 메시 미리보기, Ctrl 바인딩, 기본 Backpack 비활성 확인(`runtime.json`).\n- 빈 인벤토리에서 맨손 벌목·통나무 수집·나무 곡괭이 제작/장착·바위 채굴 후 돌 4개 획득 확인(`progression_runtime.json`).\n- 실제 주먹 관절 움직임 확인(`punch_runtime.json`). 최대 줌 약 18, 먼 모닥불 위치 표시 확인(`match_runtime.json`).\n- 로비 모드 선택 → 기존 협동 대기열의 매치 성사 카운트다운과 연습 진입/종료 확인(`lobby_flow.json`). 테스트 중 실제 텔레포트 전 대기열을 해제했다.\n- 최종 화면: `lobby_ui.png`, `mode_picker.png`, `match_ui.png`.\n- 최종 소스 일치 확인: 매치 159개·로비 104개, 불일치 0. 기존 모델 유지: 매치 MeshPart 1209개, 로비 665개.\n- 검토 사본: `../../LastLight_Match_UIInputFix_20261015.rbxlx`, `../../LastLight_Lobby_UIInputFix_20261015.rbxlx`. 크기·SHA256·소스 수 및 메시 보존 검증은 `release_files.json`에 있다.\n\n실제 새 공개 서버의 재접속·예약 매치 텔레포트 전체 흐름, 실제 휴대전화, 상품 결제는 이번 게시 후 검증하지 않았다. 기존 서버는 이전 버전을 실행할 수 있으므로 새 서버에서 확인한다. 추가 개발 보류는 유지한다. `tools/v2.py build`와 `tools/lobby.py build`로 가져온 모델을 덮어쓰지 않는다.",
+        "sha256": "52ed70964bbe5a4af64ffc58acff2c2ed7056586bc66941c36eb318128165ed0",
+        "kind": "document"
+      },
+      {
+        "id": "doc-03",
+        "project": "pets",
+        "source": "ROB/pet_realms/art/environment_v04/README.md",
+        "title": "환경 v03 → v04의 모델링 변경 기록",
+        "lineStart": 7,
+        "lineEnd": 25,
+        "excerpt": "\nv03에서 큰 실루엣을 다시 잡은 모델링 버전입니다. 실제 Blender MCP에서 메시를 제작했으며 외부 유료 모델 생성은 사용하지 않았습니다. 기존 펫 12종·알 4종·게임 성장/거래/UI 코드는 보존했습니다.\n\n환경 45종, 226개 배치, 원본 224,286 triangles이며 개별 최대는 15,246 triangles입니다. Studio에서 기존 펫·알을 포함한 메시 61종을 복원했습니다. 채굴 보상 30 → 58, HP 0에서 모델 숨김, HP 60 재생성 시 표시 복구와 신전 기단 위 서기를 확인했습니다. 현재 Studio의 스크립트 73개와 최종 파일의 소스 해시를 대조했습니다.\n\n- **소원나무 정원**: 비틀린 줄기와 돌출된 나무껍질, 넓게 뻗은 뿌리와 가지, 층진 수관, 잎 덩굴, 매달린 등불, 작은 나무 문. 네 개의 아치형 부화장 지붕과 나침반 광장·곡선 진입로·꽃밭·단차 수로를 구성했습니다.\n- **거대 정동 동굴**: 찢어진 광물 암벽으로 둘러싸인 큰 입구, 동굴 뒷벽과 바닥 결정, 천장 결정·내부 파단면, 측량 장식. 전면 채굴 공간과 이어집니다.\n- **천상 천문 신전**: 다섯 단의 기단, 홈과 금선을 새긴 기둥, 소용돌이 주두, 금빛 열린 돔, 중앙 수정과 천구의, 날개 장식, 주변 무너진 주랑.\n- **채굴물 12종 보강**: 왕관형 보석·잎 장식·금속 덩굴무늬·모서리 기둥을 갖춘 보물상자, 노출된 광맥과 곡괭이가 있는 광석, 동전과 주괴 더미, 지지대·고정 장치·파편을 갖춘 정동 결정.\n\n36개 채굴 ID와 체력·보상 규칙을 유지합니다. 큰 구조물과 겹치던 채굴물 6개를 전면 정원으로 옮겼으며 나무 줄기·동굴 벽·신전 기단에는 단순 충돌체를 연결했습니다.\n\n## 확인 자료\n\n`renders/`에 전체 맵 3종, 중심 구조물 근접 렌더 3종과 채굴물 갤러리가 있습니다. `qa/mesh_manifest.json`, `place_manifest.json`, `verification.json`, `runtime_verification.json`에 메시·빌드·소스 보존·실행 확인 기록을 저장합니다.\n\n## 실행 및 편집\n\n첫 Play에 저장된 압축 메시를 현재 서버 세션의 MeshPart로 복원하는 시간이 필요합니다. 로컬 HTTP나 Blender 원본 파일 경로에 의존하지 않습니다. 게임은 버텍스 컬러와 공통 SmoothPlastic 재질을 사용하며, FBX/GLB에 개별 원본 재질이 있습니다. 공개 서버·영구 클라우드 메시 ID·실제 휴대전화 성능은 별도 검증 대상입니다.",
+        "sha256": "595b471f71f3f0a8b244858fb9b1bad10464f5e7552f56be0c8bed5ef0ee21ef",
+        "kind": "document"
+      },
+      {
+        "id": "doc-04",
+        "project": "horror",
+        "source": "horrorgames/roblox/README.md",
+        "title": "초기 포트의 범위와 남은 작업",
+        "lineStart": 1,
+        "lineEnd": 38,
+        "excerpt": "# NO TOP FLOOR — Roblox PC port\n\nOriginal visual/audio bindings are connected and locally tested. Complete Godot behaviour and\nvisual parity are still in progress. No experience has been published; original sources/saves remain intact.\n\n## Open and build\n\nDouble-click RUN_ROBLOX.bat, or run from the repository root:\n\n    powershell -NoProfile -ExecutionPolicy Bypass -File roblox/build.ps1 -Action Open\n\nThe place is roblox/build/NO_TOP_FLOOR.rbxlx. Open it in Studio, press Play, then choose 시작.\nUse -Action Test for compilation and pure checks; -Action Build also produces the place.\nBuild regenerates authored data, asset bindings and the five original animation curves.\nPython with numpy/Pillow is used by the source-data/channel tools; pinned Rojo/Lune/Luau are in rokit.toml.\n\nWASD/mouse move/look; E interacts under the crosshair; F toggles the torch; Q/left click scans;\nG drops cargo; Shift sprints; Ctrl lowers camera/speed; Space jumps; P opens the menu.\nRecover salvage, burn it at 소각구, meet the shared quota, then use 올라가기.\nEntering the extraction area alone does not sell cargo.\n\n## Current behaviour and validation\n\n- Original 21 floor rows and 18 salvage definitions retain Korean names, prices and carrying rules.\n- Metres convert once: 1 stud = .28 m. Source gaits, jump/gravity, quota and infinite torch are retained.\n- Server owns shared item claims, economy, threats, doors and floor transitions. Epochs reject old commands.\n- Filled building-plan generation has corridor cycles and rooms. Same seeds do not reproduce Godot cell for cell.\n- 571,779 pure assertions across 5,600 floors; live two-client Studio integration passes 40 checks.\n- Searchable original cabinets/desks/lockers: one search per container, shared keys, locked doors,\n  batteries, small world pickups and a maximum of one crucifix per player.\n- Named original drawer groups use the source 0.34 m / 0.30 s motion; actual E input was verified.\n- Crucifix protects only a lethal hit. Health regenerates at source 3.2 hp/s after 14 seconds.\n- Actual W drives walk animation; original printer E pickup applies .62 carry scale and G restores 1.\n- 34 bound original sounds preload successfully. This is a loading check, not an auditory recording check.\n\nQARunner is inert outside its Studio test argument.\nRun StudioTestService:ExecuteMultiplayerTestAsync(2, \"NoTopFloorCoreQA_v1\") from the Edit context.\nSee assets/verification_20261009.json, assets/verification_search_20261009.json and",
+        "sha256": "7d84671fb96f225b3af681d5fd58019c2c0b898bb3994b4b2101f3b44afaa495",
+        "kind": "document"
+      },
+      {
+        "id": "doc-05",
+        "project": "blackfire",
+        "source": "JIHOGAY/README.md",
+        "title": "첫 보스와 후속 보스의 구현 범위",
+        "lineStart": 1,
+        "lineEnd": 17,
+        "excerpt": "# 블랙 파이어 (가제)\n\n보스전 중심 JRPG. **보스마다 게임 형식이 통째로 바뀐다.**\n\n| | 보스 | 형식 | 상태 |\n|---|---|---|---|\n| 1보스 | 역마 (疫魔) | 하데스식 3D 탑다운 액션 | ✅ 플레이 가능 |\n| 2보스 | 몽마 (夢魔) | 슬레이더스파이어식 덱빌딩 | ⬜ 스텁 |\n| 3보스 | 레비아탄 | 카타나제로식 2D 사이드뷰 | ⬜ 스텁 |\n| 막보스 | 선지자 | 위 셋의 짬뽕 | ⬜ 스텁 |\n\n비주얼은 **3D로 만들고 도트를 입힌다**. 3D 월드를 320×180으로 렌더한 뒤\n탈채도 + 디더 + 색 계단 셰이더를 먹이고 4배로 확대(니어레스트)해서\n쯔꾸르 게임 같은 싼마이 도트 화면을 만든다. 캐릭터/보스/스킬은 도트 스프라이트를 3D 공간에 세운다.\n\n---\n",
+        "sha256": "7da3beb1102a584d3dda02a0880a16ebab8abf26c2b089490f3008b2c3b91908",
+        "kind": "document"
+      },
+      {
+        "id": "doc-06",
+        "project": "jarvis",
+        "source": "local ai/jarvis/reports/STATUS.md",
+        "title": "PASS·PARTIAL·미검증을 구분한 당시 기록",
+        "lineStart": 1,
+        "lineEnd": 25,
+        "excerpt": "# Jarvis 구현 상태 (2026-10-06 21:50, 이 PC 실측 기준)\n\nPASS = 실제 실행·시험으로 확인 / PARTIAL = 동작하나 한계·일부 실패 있음 / NOT TESTED = 구현했으나 이 조건에서 미시험 / NOT IMPLEMENTED / BROKEN\n\n| 항목 | 상태 | 근거 |\n|---|---|---|\n| 로컬 LLM API (llama.cpp b11435, loopback+API 키) | PASS | `jarvis.doctor`, toolcall-*.json, 무인증 요청 거부 |\n| Tool calling (Qwen3-Coder XML / LFM2.5 Python식, 공식 파서) | PASS | toolcall-balanced-*.json, toolcall-fast-run1.json (왕복·스트리밍·취소) |\n| Browser control (Playwright MCP + 정책 게이트) | PASS | gateway-live 46/46, 공통 S1·S2 각 3/3, 음성 TEST 2·3·6 |\n| Windows control (메모장 입력·저장, 탐색기, 창 최소화/복원/전면) | PASS | gateway-live(한글 IME 모드·듀얼 모니터·닫힌 창 중단·포커스 변경 중단), S3 3/3, 음성 TEST 4 |\n| VS Code 열기 | NOT TESTED | 이 PC에 VS Code 설치 여부를 확인하지 않음(`app_open vscode`는 미설치면 거부) |\n| 파일 조작 (새 파일 자동, 수정·삭제 승인) | PASS | gateway-live, S4/S5, 음성 TEST 7(음성 \"아니\"로 거절 → 파일 유지) |\n| 제한 터미널 | PASS | 읽기 전용 자동 / 그 외 승인 / 시스템 변경 차단 (gateway-live) |\n| 승인 시스템 (패널·음성 UI 버튼·음성 \"응/아니\") | PARTIAL | 버튼·거절 음성 PASS. 음성 승인 \"응, 진행해.\"는 합성 음성 오인식(\"응 지내.\")으로 승인 안 됨 → 안전하게 미실행. 사람 음성 미시험 |\n| 모델 전환 (balanced↔fast, 한 번에 하나) | PASS | 전환 시 VRAM 10,040→997MiB 해제·포트 반환 확인. 전환이 남기던 중지 플래그 결함 수정 |\n| 메모리 모니터링 (RAM/VRAM 실측, 지속 저하 시 보류) | PASS | 패널/음성 개발자 패널, voice-benchmark.csv |\n| 긴급 정지 | PASS | S6d 3/3 (정지 후 도구 결과 0, 모델 슬롯 해제), 음성 UI 작업 중지 버튼 |\n| UI (음성 오브 화면 + 개발자 패널 + 기존 제어 패널) | PASS | 실제 Chrome에서 상태 전환 확인(browser-mic-*.json) |\n| STT (whisper.cpp large-v3-turbo q5_0, GPU) | PASS | 합성 음성 72개: 명령 이해 83.3%, CER 0.045, 0.10초/발화. **사람 음성 미시험** |\n| TTS 기본 (Supertonic 3, CPU) | PASS | 짧은 문장 0.36초, RTF 0.17~0.23, VRAM 0 |\n| TTS 사용자 음성 (Qwen3-TTS-12Hz-0.6B 커스텀, `blend_yacoco_video_grgnkksr9p0_a851c782`) | PARTIAL | 연결·합성 성공(VRAM +2.5GB), 그러나 RTF 3.2(실시간보다 3배 느림)로 실시간 대화엔 부적합 |\n| Streaming (LLM 토큰 → 문장 → TTS) | PASS | 첫 음성이 전체 답변 완료 전에 재생됨(e2e-voice-*.json) |\n| Barge-in (\"잠깐\" → 즉시 중단, 대기 음성 폐기) | PASS | WebSocket 시험 + 실제 Chrome 마이크 경로(browser-mic-B.json) |\n| 작업 중 수정 (\"아 잠깐, 4.5 기준으로\") | PASS(구조) / NOT TESTED(음성 시나리오) | 새 지시 시 현재 턴 취소 → 같은 ACP 세션에서 \"[이전 지시 수정]\"으로 이어감. 전용 음성 시나리오는 미실행 |\n| 세션 기억 (\"아까 페이지 다시\") | PASS | TEST 6: 세션 메모 + ACP 이력으로 이전 페이지 재표시, 최소화된 브라우저를 전면 복원 |",
+        "sha256": "79539fc7a7c8341868071eecd9534821266f30a0d7cdb6bd7ed2d564bba35cfd",
+        "kind": "document"
+      },
+      {
+        "id": "doc-07",
+        "project": "claudelocal",
+        "source": "편집/claude-local/VERIFICATION-v1.1.0.ko.md",
+        "title": "v1.1.0 실제 검증 기록",
+        "lineStart": 1,
+        "lineEnd": 24,
+        "excerpt": "# Claude Local 1.1.0 검증 기록\n\n검증 날짜: 2026-10-10 (Asia/Seoul).\n\n## 완료\n\n- `python -m unittest discover -s tests -v`: **30개 테스트 통과**. 마지막 실행에서 Tk 콜백/테마 오류 출력 없음.\n- 기존 1.0.0의 파일 변경 승인, 백업·복원, UTF-8 BOM/CRLF 보존, 실제 PowerShell 출력·종료 코드·시간 제한·중지, DPAPI 키 저장, 정션 외부 경로 차단 검사 유지.\n- 새 폴더 경로 직접 입력, 잘못된 경로 복원, 최근 폴더, 하위 폴더 트리, 인증 파일 제외, 선택 파일 요청 추가 검사 통과.\n- 다른 프로젝트 폴더를 열어 모의 Claude 요청으로 파일을 생성하고 실제 PowerShell `(Get-Location).Path`를 실행: 파일 저장 위치와 명령 실행 위치 모두 선택한 폴더와 일치.\n- 폴더 변경 시 이전 대화가 원래 작업 폴더에 연결해 저장되는 것 확인.\n- EXE 시작 인자 `--workspace` 및 폴더 위치 인자 파싱, 새 프로젝트 폴더 생성 검사 통과.\n- 최신 기본 모델 4개와 이전 모델 3개가 API 키 없이 표시되는 것 확인.\n- 모의 Models API로 새로운 모델 병합, 캐시 저장, 계정 확인 표시, 현재 모델 선택 유지, 실제 모델 출력 토큰 한도 적용 검사 통과.\n- 종료 모델의 상태 보존 및 선택 목록 제외, 종료 예정 모델 상태 표시 구현.\n- 기본 및 최소 창 크기에서 입력창과 보내기 버튼 배치 검사 통과.\n- 1.1.0 EXE 빌드 성공. 실제 실행 화면에서 폴더 경로 입력창, 폴더 열기/새 폴더/탐색기 버튼, Sonnet 5.5 기본값, 계정 미확인 표시, 파일 탭, 입력창을 Computer Use로 확인.\n- 바탕화면 `Claude Local.lnk`를 `dist\\v1.1.0\\ClaudeLocal\\ClaudeLocal.exe`로 갱신.\n- 이전 EXE 및 1.0.0 ZIP 보존. 변경 전 소스·문서·테스트는 `history\\v1.0.0`에 보관.\n\n## 모델 근거\n\n[공식 모델 개요](https://platform.claude.com/docs/en/models/overview)를 현재 확인해 Sonnet 5.5 / Opus 5.5 / Haiku 5.5 / Fable 5.1의 Claude API ID를 사용했습니다. 계정별 확인과 신규 모델 추가에는 [Models API](https://platform.claude.com/docs/en/api/models/list)를 사용합니다.\n",
+        "sha256": "e41b8769ee6e1dcefdb9839d5eb004fca4332f66256e93ac1166ac65c09451d8",
+        "kind": "document"
+      },
+      {
+        "id": "doc-08",
+        "project": "hanmadi",
+        "source": "japan/README.md",
+        "title": "1.1.0 인식·콘텐츠·음성 업데이트",
+        "lineStart": 1,
+        "lineEnd": 23,
+        "excerpt": "# 한마디 더\n\n## 1.1.0 업데이트 (2026-10-16)\n\n- 일본어를 명시한 기기 음성 인식, 최대 45초의 여러 문장 누적, 최종 결과 대기,\n  실제 인식 후보 선택 및 원문 수정 후 재통역을 지원합니다.\n- 통역 화면에서 `AI 인식`을 선택하면 최대 45초의 WAV 녹음을 Gemini로 보내\n  일본어 원문을 전사합니다. 설정에 입력한 API 키와 인터넷이 필요하며 API 사용량이\n  발생합니다. 기본값은 기기 인식이고, 키 없이도 기존 기능을 사용할 수 있습니다.\n- 연습 미션 40개, 표현 카드 250개로 확장했습니다. 관광·긴급 상황도 포함합니다.\n- 일본어 Nanami 396개, 한국어 SunHi 481개의 신경망 음원 877개를 앱에 넣었습니다.\n  고정 연습·현장 문장은 인터넷 없이 재생하며, 새 문장은 기기 음성으로 대체합니다.\n- 한국어 뜻 듣기와 양언어 미리듣기를 추가하고, 연습에서 사용자 답변 음성이\n  끝난 다음 점원 응답으로 넘어가도록 수정했습니다.\n- 작은 휴대폰에서 긴 답변과 완료 목록을 스크롤할 수 있도록 개선했습니다.\n\n음원 재생성: `python scripts/generate_tts_audio.py --concurrency 16`\n이 명령은 빌드 시점에만 온라인 음성 생성을 사용합니다. 앱의 내장 음원 재생에는\nAPI 키나 네트워크 연결이 필요하지 않습니다. 실시간 생성 문장의 음성 품질은\n설치된 기기 음성에 따라 다릅니다.\n\n일본 여행 현장에서 바로 쓰는 회화 도우미. 점원이 무엇을 묻는지 파악하고\n바로 답할 문장을 고르는 것에 초점을 맞춘 안드로이드 앱입니다.",
+        "sha256": "8744ac5ce391aaa97bf46053e0c21a679733aaa7e0088cdf697af5ef6cffde07",
+        "kind": "document"
+      },
+      {
+        "id": "doc-09",
+        "project": "nerulio",
+        "source": "SITE/README.md",
+        "title": "로컬 편집기와 네 개의 작업실",
+        "lineStart": 1,
+        "lineEnd": 16,
+        "excerpt": "# Nerulio Studio · v1.2\n\n**한 파일로 이어서 작업하는 로컬 편집기.** 이미지 편집, PDF 편집, 도트화, 미디어 편집을 네 개의 작업실로 묶었습니다.\n\n## 유입 UX + 다국어\n\n- `/image/upscale/`은 업스케일 안내와 배율 선택부터 시작합니다. 배경제거, 압축, 변환, 자르기, PDF 합치기 등도 각 목적에 맞는 입구를 사용하고 내부 편집 엔진을 공유합니다.\n- 파일 선택 → 실행 → 실제 결과 확인 → 다운로드 → 관련 작업으로 이어집니다. 결과 확인 전에 파일을 자동 다운로드하지 않습니다.\n- **한국어 / English / 日本語** 및 자동 감지를 지원합니다. 우선순위는 `?lang=` → URL 언어 접두사 → 저장된 선택 → 브라우저 선호 언어 → 영어입니다.\n- 언어 변경은 파일을 다시 불러오지 않으며, 편집 결과와 입력 중인 설정을 유지합니다. 기기에는 선택한 언어, 즐겨찾기 도구 ID, 최근 도구 ID 3개를 저장합니다. 파일명이나 파일 내용은 저장하지 않습니다.\n- 홈에서 업스케일·배경제거·압축·PDF 합치기를 바로 찾을 수 있고, 보조 기능은 아이콘·툴팁으로 유지합니다.\n\n예시: `/en/image/upscale/?scale=4`, `/ja/pdf/merge/`, `/ko/pixel/?n=48`, `/png-to-webp/`.\n\n## 실행과 배포 파일\n",
+        "sha256": "7e94c015278625d0ac489520ec8ed45f3dd8785d3af7711d1f491fc80aa811fe",
+        "kind": "document"
+      },
+      {
+        "id": "doc-10",
+        "project": "gauntlet",
+        "source": "gau/README.md",
+        "title": "생성보다 측정·수정·롤백을 먼저",
+        "lineStart": 1,
+        "lineEnd": 22,
+        "excerpt": "# 3D Gauntlet\n\nConstraint-driven procedural 3D asset generation with **deterministic**\nverification, localized repair, and checkpoint/rollback — built on headless\nBlender and LangGraph.\n\n**v1.0** adds evidence-grounded adaptive verification: a bounded D0-D3 ladder\nthat escalates on *evidence quality*, not on model confidence.\n\n> Measurement establishes facts. AI observes what measurement cannot capture.\n> **Evidence quality determines whether judgement is possible at all.**\n\nThere is no D4 and no debate loop. Uncertainty that survives the ladder is\nreported as `AMBIGUOUS` rather than argued away.\n\nMeasured across the L0-L8 benchmark ladder: **215 Blender evaluations, 0 AI\ncalls**, 8/8 rungs passing. See [docs/v1.0.md](docs/v1.0.md) and\n[docs/v0.2.md](docs/v0.2.md).\n\n```\nAssetSpec ─► Semantic IR ─► Procedural Generator ─► Headless Blender\n                                                          │",
+        "sha256": "ae1a6d855ed32d756164660842615f8ddb9641d636536a0dc04bb39723be39ca",
+        "kind": "document"
+      },
+      {
+        "id": "doc-11",
+        "project": "learn",
+        "source": "coding/claude-learn/README.md",
+        "title": "학습 기록과 Godot 핫리로드 무대",
+        "lineStart": 1,
+        "lineEnd": 36,
+        "excerpt": "# claude-learn\n\nClaude Code 세션과 연결되는 코딩 학습 대시보드.\n평소처럼 Claude Code로 코딩하면, 그 세션이 그대로 학습 기록이 되고 Claude가 튜터 역할을 합니다.\n\n- 지원 언어: GDScript(Godot 4), Python 커리큘럼 내장. JS/TS/C#/Rust 등은 활동 기록만 됨 (커리큘럼은 `content/<lang>.json` 추가로 확장).\n- 의존성 없음. Node 18+ 만 있으면 됨.\n\n## 빠른 시작\n\n가장 쉬운 방법: 폴더의 `start.bat` 을 더블클릭하면 서버가 뜨고 브라우저가 열립니다. 끝낼 때는 `stop.bat`.\n\n터미널에서 하려면:\n\n```bash\ncd claude-learn\nnpm run hooks:install     # ~/.claude/settings.json 에 훅 등록 (백업 자동 생성)\nnpm start                 # http://localhost:4777 대시보드 (브라우저 자동 열림)\n```\n\n이미 열려 있는 Claude Code 세션은 재시작해야 훅이 적용됩니다.\n\n## 연습 무대 (Godot 실시간 연동)\n\n`playground/` 는 Godot 4 프로젝트입니다. 레슨마다 `exercises/NN_slug/exercise.gd` 연습 파일이 있고, 이 파일을 어떤 편집기로든 저장하면 실행 중인 게임이 0.5초 안에 스크립트를 다시 로드해 화면이 바뀝니다.\n\n```\nplay.bat            게임만 바로 실행 (Godot 4 exe 를 바탕화면/다운로드에서 자동 탐색)\nedit.bat            Godot 에디터로 열기 (F5 로 실행)\n```\n\n- 대시보드에서 \"현재 레슨으로\" 를 누르면 Godot 무대가 그 레슨으로 바뀝니다. 게임에서 `[` `]` 키로 바꾸면 대시보드가 따라옵니다.\n- 오른쪽 HUD 에 단계와 체크 결과(✓/✗)가 보이고, 같은 결과가 대시보드와 Claude Code 에 전달됩니다.\n- **코치 모드**(기본 켜짐): Claude 는 연습 파일을 대신 쓰지 않고 한 단계씩 지시합니다. 저장하면 Godot 이 검사하고, 다음 프롬프트에서 Claude 가 \"최근 체크 결과\"를 보고 이어서 코치합니다.\n- 막히면 `playground/solutions/` 에 정답 예시가 있습니다.\n",
+        "sha256": "658fd7ad3f61724e93f8e6a924348e245b50cb698f85cdf1e96b31e475ed0653",
+        "kind": "document"
+      },
+      {
+        "id": "doc-12",
+        "project": "study",
+        "source": "시허모ㅗㅗㅗㅗㅗㅗ/study-lab/VERIFICATION.md",
+        "title": "사진 확인·풀이·채점·기록 복구의 검증",
+        "lineStart": 1,
+        "lineEnd": 18,
+        "excerpt": "# 검증 기록 — 2026-10-03\n\n## 실제 확인\n\n- Node.js 24.15.0, Codex CLI 0.159.2. ChatGPT 로그인 사용. 카탈로그 기본 모델 GPT-6.1-Sol.\n- 실제 app-server 연결/initialize/account/read/model/list, 학습 thread 생성, 스키마를 적용한 설명 생성 성공.\n- 직접 만든 뉴턴 제2법칙 PNG를 업로드하여 F=ma, 2 kg, 오른쪽 6 N, 오른쪽 3 m/s²를 정확히 읽음.\n- 사진 확인 전에는 문제 요청 거부. 사용자 확인 후 설명과 기초 문제 생성 성공.\n- 고정 조건 F=6 N, m=2 kg 문제에 독립 계산 답안 `오른쪽 3 m/s², 6/2=3`을 제출. 정답 판정과 복습 기록 저장 성공.\n- 브라우저에서 별도 속도/가속도 수업 생성. 2초 동안 +2 → +6 m/s 문제에 `(6-2)/2 = +2 m/s²` 제출. 정답·해설·3일 후 복습 기록 확인.\n- 서버 재시작 후 기존 사진 수업의 메시지 8개와 복습 1개 복구. 같은 thread 재개 후 사진 속 질량 2 kg/알짜힘 오른쪽 6 N을 정확히 기억함.\n- Windows PowerShell 5 런처의 숨김 서버 실행, 인증된 종료, 재실행 성공. localhost 이름 해석 지연을 피하도록 헬스 검사만 127.0.0.1을 사용.\n- 1440×960 PC 레이아웃, 390×844 모바일 레이아웃 확인. 모바일 body scrollWidth=390/viewport=390, 가로 넘침 없음.\n- 가속도 슬라이더를 1.0 → 1.5로 변경: t=2초에서 위치 2.0 → 3.0 m로 갱신됨.\n- 브라우저 오류 로그 0건. npm audit: 취약점 0건.\n- `npm test` 3개 시나리오 통과. 인증/출처 제한, 공인 IP 제외, 업로드 형식, 사진 확인, 정답 숨김, 힌트 사용, 오답 기록, 중복 제출 방지, DB 복구를 포함.\n- `npm run check` 구문 검사 통과.\n",
+        "sha256": "3cd46be9bd1549a937c7aab9efe07cd93947ab1205c30d035a77b2a0861d93ec",
+        "kind": "document"
+      },
+      {
+        "id": "doc-13",
+        "project": "saup",
+        "source": "saup/README.md",
+        "title": "기능 마감과 실결제 연결의 구분",
+        "lineStart": 1,
+        "lineEnd": 25,
+        "excerpt": "# Saup · 위탁판매 운영 기반\n\n## Saup 1.0 기능 마감\n\n초기 설정·외부 배송 확인·클레임/부분 환불·정산 입금·미확정 정산서 정정 콘솔과 `/v1` 경로를 추가했습니다.\n운영 시작은 `초기 설정`에서 진행하며, 빈 설치에는 `python -m scripts.init_db`를 사용합니다.\n기존 기본 Compose는 합성 데모입니다. 빈 설치 인수 검증은 `docker/compose.blank.yml` 오버라이드를 사용합니다.\n마이그레이션 0005와 API/worker를 함께 적용해야 합니다. 범위·회계·검증 방법·차단 조건은\n[functional-closeout.md](docs/functional-closeout.md)에 있습니다. 실제 외부 송금·마켓 자동 연동을 의미하지 않습니다.\n\n## Functional-closure development checkpoint\n\nThis change starts from verified main `c7fd4f0` and adds operational XLSX order\npreview/import plus explicitly verified manual-source validation. It reuses the\nexisting supplier workflow without new tables/migrations. It is **not** a full\nSaup 1.0 completion or live marketplace/payment enablement. The unmerged Phase 12A\ndraft remains separate. Scope: `docs/release-closure.md`; operation and tests:\n`docs/order-intake.md`. For this source use its exact commit/Actions artifacts;\nhistorical counts below are not current-source verification.\n\n\n**Phase 10 운영 기반 + Phase 11A 검토 해결 + Phase 11B 마켓 고객 취소 대사. 실제 마켓·실결제 커넥터는 미승인 상태입니다.**\n\nPython 3.12+, FastAPI, SQLAlchemy 2, Alembic, PostgreSQL, Redis와 Next.js 운영 콘솔을 사용합니다. 기존 아키텍처를 유지하면서 Excel 공급사의 발주 묶음·전송·접수·증빙 지급·배송 대기를 연결합니다. PostgreSQL이 운영 데이터의 기준이며 Excel·메신저·운영자 메모는 외부 증거입니다.\n",
+        "sha256": "1c7efd90406d4f05f029dbc0752329dc914fa2a5ea43d73a68c0b8f005ff5c27",
+        "kind": "document"
+      },
+      {
+        "id": "doc-14",
+        "project": "sangse",
+        "source": "SANGSE/sample-variera-v5/READ-ME.txt",
+        "title": "최종 파일과 제작 근거의 연결",
+        "lineStart": 1,
+        "lineEnd": 26,
+        "excerpt": "바리에라 상세페이지 V5 / 2026-10-18\n\n먼저 review.html을 열면 상세 10컷과 별도 썸네일 2장을 볼 수 있습니다.\nindex.html은 전체 상세페이지, thumbnails.html은 썸네일 조판 원고입니다.\n\n납품 파일\n  export/detail-full-1000.jpg 및 .png: 전체 원고\n  export/cuts/: 별도로 기획·편집한 완성 상세 디자인 10컷, 각 JPG·PNG\n  export/thumbnails/: 단품형·사용 장면형 썸네일 2장, 각 1000×1000 JPG·PNG\n  renders/: 전체 축소 원고, 모바일 축소 원고, 컷 모음\n\n완성 상세 10컷 / 의미상 10구간 / 썸네일 2장 / 신규 AI 채택 사진 3장입니다.\nAI 사진 3장은 첫 화면·컵을 드는 동작·천으로 닦는 장면이며,\n썸네일의 재사용·크롭·내보내기는 신규 AI 사진 수에 중복 합산하지 않았습니다.\n\n제작 근거\n  page-plan.json: 컷별 질문·카피·사진·근거·출력 연결\n  service-scope.json: 이번 시안 범위와 실제 파일 대조, 미정 계약 조건\n  evidence/facts.json: 공식 사양과 미확인 정보\n  evidence/assets.json: 사진 출처·역할·해시\n  evidence/imagegen-prompts.json: 내장 image_gen으로 생성한 프롬프트 3개\n  evidence/qa.json: 기계적 출력 검사와 제작자 육안 검토 기록\n\n이번 원고 폭 1000px와 가변 컷 높이는 시안 제작 규격입니다.\n참고 패키지의 가격을 사용자의 판매 가격으로 확정하지 않았습니다.\n계약상 규격·AI 사진 수·재생성·원본·수정 1회의 범위 등은 미정입니다.",
+        "sha256": "7802774ca8e258784ce4303007d3c5503ed32d19fe88cf520e82eed64d8d7634",
+        "kind": "document"
+      },
+      {
+        "id": "doc-15",
+        "project": "thermal",
+        "source": "science/thermal_llm_actual_throttle_extension_v1.3.md",
+        "title": "후속 실험으로 표기한 프로토콜",
+        "lineStart": 1,
+        "lineEnd": 22,
+        "excerpt": "# Actual-Throttle Adaptive Extension v1.3\n\n## Status\n\nThis is a post-hoc adaptive extension to protocol v1.2. It was added after the first analysis showed that the nominal LOW/NORMAL/HIGH states were not sufficiently separated. It is not presented as pre-registered work.\n\n## Objective\n\nCapture direct thermal-control evidence and compare performance under materially different thermal exposure:\n\n1. CPU: sustain the Ryzen 7 5700G at its 95 C control point briefly enough to record Thermal Limit, effective clock, and PPT response.\n2. GPU benchmark: use one continuous FurMark run and compare its cold ramp with its heat-saturated tail, avoiding cooldown during process restarts.\n3. GPU Local LLM: compare two cold micro-runs with two immediately post-preheat hot micro-runs using identical llama-bench parameters.\n\n## Adaptive state definitions\n\n- CPU THROTTLE: `Thermal Limit = 100%` repeatedly or continuously, accompanied by effective-clock reduction under the same continuous Cinebench workload.\n- GPU COLD LLM: no `SW Thermal Slowdown` sample during GPU-active telemetry for the measured llama-bench run.\n- GPU HOT/THROTTLE LLM: one or more `SW Thermal Slowdown` samples during GPU-active telemetry, after the same bounded FurMark precondition.\n- GPU continuous ramp: cold and heat-saturated windows are taken from one uninterrupted workload. This is a within-run time comparison, not independent replication.\n\n## Workloads",
+        "sha256": "c3cf4b63a5fb8f0166c970921e96c415b4b22809405a6f61c3295723c61a970c",
+        "kind": "document"
+      },
+      {
+        "id": "doc-16",
+        "project": "go2",
+        "source": "issac_sim/analysis/final_go2_20h_20261017/FINAL_RESULT_KO_20261018.txt",
+        "title": "추가 학습 실패 후 기존 C0를 유지한 이유",
+        "lineStart": 1,
+        "lineEnd": 22,
+        "excerpt": "Go2 C0 최종 실행 결과 — 2026-10-18 10:33 KST\n\n최종 정책: 기존 C0 5500회 체크포인트 유지.\n추가 학습: C0 고정 설정, 6144환경, seed42, 원본 full checkpoint resume.\n기록된 추가 업데이트588회 / 마지막 logged iteration6087에서 value loss inf 검출.\n실행기가 정상 중단 신호를 보내 제공 후처리와 체크포인트 보존을 마쳤다.\n초기100회 이후 오류이므로 사전 승인 범위대로 scratch 재시작/추가 학습은 하지 않았다.\n원인을 learning-rate 차이 하나로 확정하지 않는다. 실제 Inf 로그와 초기 LR 기록을 함께 보존했다.\n\n고정 선택 시험:\n기존 C0_5500: 낙상0, 내부Q3 0.9063397391727698, XY RMSE0.09022262429827108.\n마지막 저장 C0_resume_6000: 낙상0, 내부Q3 0.9015250905144003, XY RMSE0.095305607507248.\n사전 순위 규칙으로 기존 C0를 선택했고 이후 차순위로 재선택하지 않았다.\n내부Q3는 공식점수 또는 성공확률이 아니다. 추가 학습의 성능 개선은 확인되지 않았다.\n\n선택된 기존 C0 최종 검증:\nG1~G7 / 128환경 / reset3079,3109 / 각1000control steps.\n기본 시나리오 총1792에피소드 낙상0.\n계단10cm: 0/256 낙상. 계단15cm: 1/256 낙상. 밀침1.5m/s: 1/256 낙상.\nXY RMSE0.08559941534666536, yaw RMSE0.1201038621874067.\n완료 영수증, 시나리오/시드/에피소드별 자료, 유효 샘플과 마스킹을 로컬에서 검증했다.\n",
+        "sha256": "3d0af4d664e098741412173d236bee1fbfca49244dc124a381305393623f2c88",
+        "kind": "document"
+      },
+      {
+        "id": "doc-17",
+        "project": "profiles",
+        "source": "편집/profiles/B/README.md",
+        "title": "별도 편집 프로필의 작업 기준",
+        "lineStart": 1,
+        "lineEnd": 22,
+        "excerpt": "# 프로필 B — 다빈치살롱 자연스러운 대화 쇼츠\n\n공통 전달: [Drive 업로드·링크 공개 기준](../COMMON_DELIVERY.md).\n\n현재 누적 스타일은 **v29의 화면·편집 의도에 B-073까지의 최신 지시를 누적 반영한 정책 v17**이다. v29는 내부 전환 문제가 남은 참고 자료이며 완성 승인본은 아니다. 사용자 요청으로 현 편집 스타일을 후속 작업용 규칙에 등록했다. 시작 전에 `profile.json`과 이 문서, [current_style.json](current_style.json)을 읽는다. 모델 가중치를 훈련했다는 뜻은 아니다. 다른 의뢰인에게 자동 적용하지 않는다.\n\n## 현재 기본 스타일\n\n| 항목 | 적용 기준 |\n|---|---|\n| 목표 | 상품 소개가 아니라 원본에서 제품을 자연스럽게 좋게 말하는 실제 대화·사용·반응을 쇼츠로 편집 |\n| 길이·속도 | 20~30초. **원본 1.1배** (2026-10-11 사용자 확정, B-056). 모닝 루틴 v25~v29의 1.2배는 이력. 문장 끝과 명료도 유지 |\n| 화면 | 1080×1920 세로, 화이트 배경. 실제 영상·TTS 사진이 1080×1080, y420~1500을 여백 없이 채움 |\n| 인물 | 말하는 배우 얼굴 중심 근거리샷. 같은 발언의 실제 반응을 짧게 사용 |\n| 제목 | 큰 두 줄, 가능하면 배우 이름. 주아체 118px 기준, 흰색/초록색 #00FE0B, 검정 테두리 |\n| 생성 자막 | 주아체 67px 기준, 흰색·검정 테두리. 기존보다 60px 올린 글자 상단 y1355를 시작값으로 장면별 조정 |\n| 원본 자막 | 얼굴을 살리는 크롭으로 줄임. 불가피하게 남는 대사는 생성 자막 중복 제거 |\n| 시작 | 구글 이미지 검색에서 찾은 관련 실제 이미지. 인물은 밝고 깔끔한 모델·뷰티·패션 화보 우선. 화이트·아이보리·밝은 중립 배경과 고른 조명. 첫 3초에 핵심. 원출처·파일·해시·권리 확인 상태 보존 |\n| TTS | 상냥하고 통통 튀며 아주아주 신나는 광고 말투의 짧은 두 구간 이상 (B-071). 대사 설명을 반복하거나 중간에 끊지 않고 맥락 전환에 배치. 초반·중반에 서로 다른 밝고 깔끔한 실제 화보 사진. 원본 정지·프레임 캡처·연출/AI 이미지 금지 |\n| 댓글 | 실제 캡처를 하단 화이트 여백에 순환. 아이디·아바타 모자이크. 별도 ‘실제 시청자 댓글’ 작은 문구 제외 |\n| 상품 이미지 | 발언 이해에 필요한 경우에만 작게 보조 자료로 사용. 상품 링크만으로 사진·누끼를 자동 추가하지 않음 |\n| 출처 | 영상 하단 화이트 여백, 원본 채널·프로그램. 42px·y1860 시작값 |",
+        "sha256": "2e04208bb3e028b685c8d5b39cf6afaa47abdbff02863fe2c4c78a8d1ef64d44",
+        "kind": "document"
+      },
+      {
+        "id": "request-novel",
+        "project": "novel",
+        "title": "당시 요청에서 확인한 출발점",
+        "source": "Codex 요청 메타데이터 / 2026-07-17",
+        "lineStart": null,
+        "lineEnd": null,
+        "excerpt": "이 프로젝트는 웹소설 《회귀한 마왕은 용사파티를 타락시킨다》 집필 프로젝트다.",
+        "kind": "request",
+        "sha256": "a90521b934535531f21cd3d06deeeb385d01861bc192132118da32fe00ad3f9b"
+      },
+      {
+        "id": "request-geto",
+        "project": "geto",
+        "title": "당시 요청에서 확인한 출발점",
+        "source": "Claude 요청 메타데이터 / 2026-09-03",
+        "lineStart": null,
+        "lineEnd": null,
+        "excerpt": "geto 를 이제 진짜 pc방 os 스타일로 개선하자. 지금은 걍 블록아웃느낌이고",
+        "kind": "request",
+        "sha256": "ded77f210b813036a7014a596bc121e63f8ef67902e739155333d57a92beffeb"
+      },
+      {
+        "id": "request-spatial",
+        "project": "spatial",
+        "title": "당시 요청에서 확인한 출발점",
+        "source": "Claude 요청 메타데이터 / 2026-09-06",
+        "lineStart": null,
+        "lineEnd": null,
+        "excerpt": "참고로 이건 3d 공간에서 진행될 프로젝트임 음성채팅 + 밈 띄우기 + 화면 공유로 띄우기 세가지 MVP",
+        "kind": "request",
+        "sha256": "139d0c63f876fc3222a7083a0ec5ee3603e66a54fda7c05147d2e588100ea539"
+      },
+      {
+        "id": "request-minecraft",
+        "project": "minecraft",
+        "title": "당시 요청에서 확인한 출발점",
+        "source": "Claude 요청 메타데이터 / 2026-09-09",
+        "lineStart": null,
+        "lineEnd": null,
+        "excerpt": "영상들이 실제 플레이하는거같지 않아 걍 몬스터 유도하는 영상이고 자막 스타일은 스토리나 미스터비스트같이 올라오는 빠른 스타일로",
+        "kind": "request",
+        "sha256": "65a392ff45914721229615b97d46aaeead86e6fef16b2d71589a2bdf51a6a555"
+      },
+      {
+        "id": "request-ranklab",
+        "project": "ranklab",
+        "title": "당시 요청에서 확인한 출발점",
+        "source": "Codex 요청 메타데이터 / 2026-10-17",
+        "lineStart": null,
+        "lineEnd": null,
+        "excerpt": "목표는 기존의 짧은 영상 클립들을 AI가 분석하여, 재미있는 장면 5개를 선정하고, 5위부터 1위까지 순위를 매기는 유튜브 쇼츠를 자동 제작하는 프로그램을 실제 구현하는 것입니다.",
+        "kind": "request",
+        "sha256": "7f8f73edd1e947e0ab5499c632657d07002981108d7f98e1a3a30bc8ad165d09"
+      },
+      {
+        "id": "request-jobs",
+        "project": "jobs",
+        "title": "당시 요청에서 확인한 출발점",
+        "source": "Claude 요청 메타데이터 / 2026-09-20",
+        "lineStart": null,
+        "lineEnd": null,
+        "excerpt": "나는 돈이 벌고 싶어. 자동화 + 너를 이용해서. 어떤 방법들이 있을까?",
+        "kind": "request",
+        "sha256": "7e732b8e0e75f07fb0e45b507f26c7e751d6918b9c2005a5ba7e2adb8c00608a"
+      }
+    ],
+    "models": [
+      {
+        "id": "model-0",
+        "project": "lastlight",
+        "title": "발전기 초기 모델",
+        "version": "Style A v01",
+        "src": "evidence/model-0.glb",
+        "source": "ROB/art/style_a_v01/exports/Generator.glb",
+        "bytes": 66168,
+        "sha256": "4287fbbf105d811f54b01e29306929999a512ff03c537b3a03d61837df01bbac"
+      },
+      {
+        "id": "model-1",
+        "project": "lastlight",
+        "title": "발전기 후속 모델",
+        "version": "Style A v06",
+        "src": "evidence/model-1.glb",
+        "source": "ROB/art/style_a_v06/exports/GeneratorV06.glb",
+        "bytes": 196720,
+        "sha256": "eb3da8f86246d023efba9b14b207413a446dd798351838b6cad917a4ba4e2d2a"
+      },
+      {
+        "id": "model-2",
+        "project": "pets",
+        "title": "정원 중심 환경 모델",
+        "version": "환경 v04",
+        "src": "evidence/model-2.glb",
+        "source": "ROB/pet_realms/art/environment_v04/exports/landmark_meadow.glb",
+        "bytes": 35000,
+        "sha256": "baec1c00495e062c0d95efdabe12b32481ca2079ad3b8c8840c8da579efb1d19"
+      }
+    ],
+    "clips": [
+      {
+        "id": "go2-c0-play",
+        "project": "go2",
+        "title": "C0 대표 정책의 실제 실행 영상",
+        "version": "C0 대표 실행",
+        "date": "2026-10-18",
+        "src": "evidence/go2-c0-play.mp4",
+        "poster": "evidence/go2-c0-poster.webp",
+        "duration": 9.98,
+        "source": "final_go2_20h_20261017 / representative_play / rl-video-step-0.mp4",
+        "note": "원본 9.98초 실행 영상을 웹용으로 재인코딩했습니다. 공식 점수나 모든 시나리오 성공의 증거는 아닙니다."
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "coffee",
+      "project": "vesna",
+      "label": "CafeVesna",
+      "number": "01",
+      "title": "잘 보이지 않던 조리,\n플레이할 수 있는 화면으로.",
+      "summary": "카페 게임에서 커피를 만드는 시점과 조작을 고친 과정.",
+      "before": "ev-02",
+      "after": "ev-03",
+      "mode": "wipe",
+      "pairType": "수정 전후 · 같은 제조 과정",
+      "quote": "1인칭 시점에서 커피 만드는게 잘 안보인다. 스팀을 쓰기 어렵다.",
+      "source": "doc-00",
+      "date": "2026-10-19",
+      "problem": "눈높이 시점에서 기구가 컵을 가리고, 스팀과 놓기 조작이 어려웠다.",
+      "change": "카메라를 바리스타 위치로 옮기고 공정별 확대·진행 게이지·놓기 미리보기를 추가했다.",
+      "check": "수정 전후 캡처와 조작 변경 문서가 남아 있다. 실제 사람 플레이와 스팀 청취 검수는 별도다.",
+      "gallery": [
+        "ev-02",
+        "ev-03",
+        "ev-04",
+        "ev-05",
+        "ev-06",
+        "ev-00",
+        "ev-01"
+      ]
+    },
+    {
+      "id": "pets-land",
+      "project": "pets",
+      "label": "Pet Realms",
+      "number": "02",
+      "title": "비슷한 섬에서,\n기억에 남는 장소로.",
+      "summary": "정원·동굴·신전의 실루엣을 v03에서 v04로 다시 잡은 환경 제작.",
+      "before": "ev-13",
+      "after": "ev-14",
+      "mode": "wipe",
+      "pairType": "환경 v03 / v04 · 제작 렌더",
+      "quote": "v03에서 큰 실루엣을 다시 잡은 모델링 버전입니다.",
+      "source": "doc-03",
+      "date": null,
+      "problem": "펫 채굴 루프 위에 각 지역을 구분하는 장소의 인상이 필요했다.",
+      "change": "소원나무 정원, 거대 정동 동굴, 천문 신전의 중심 구조물을 다시 만들었다.",
+      "check": "기존 펫·성장·UI 보존, 배치·메시와 채굴 동작 검수 기록을 함께 보관했다.",
+      "gallery": [
+        "ev-12",
+        "ev-13",
+        "ev-14",
+        "ev-15",
+        "ev-16"
+      ]
+    },
+    {
+      "id": "nerulio-flow",
+      "project": "nerulio",
+      "label": "Nerulio",
+      "number": "03",
+      "title": "파일을 열고,\n다음 작업까지 이어가도록.",
+      "summary": "새로 실행해 확인한 이미지 편집 → 도트 에셋 제작 흐름.",
+      "before": "nerulio-editor",
+      "after": "nerulio-pixel",
+      "mode": "side",
+      "pairType": "동일 버전의 기능 흐름 · 새 로컬 캡처",
+      "quote": "파일 선택 → 실행 → 실제 결과 확인 → 다운로드 → 관련 작업으로 이어집니다.",
+      "source": "doc-09",
+      "date": "2026-10-24",
+      "problem": "개별 도구를 쓰고 끝내는 흐름에서 다음 편집으로 넘어가기 어려웠다.",
+      "change": "이미지·PDF·게임 에셋·미디어를 작업실로 묶고 같은 파일을 다음 작업에 넘긴다.",
+      "check": "기본 샘플을 열고 실제 32×32 변환 결과를 확인했다. 운영 서버와 전체 파일 형식 검증은 별개다.",
+      "gallery": [
+        "nerulio-home",
+        "nerulio-editor",
+        "nerulio-pixel"
+      ]
+    },
+    {
+      "id": "lastlight-play",
+      "project": "lastlight",
+      "label": "Last Light",
+      "number": "04",
+      "title": "모델이 서 있는 곳에서,\n게임이 이어지는 곳으로.",
+      "summary": "초기 모델 검수에서 로비·매치 UI와 제작·채굴 흐름으로.",
+      "before": "ev-07",
+      "after": "ev-09",
+      "mode": "side",
+      "pairType": "서로 다른 개발 단계의 실행 화면",
+      "quote": "맨손 벌목 → 통나무 → 곡괭이 → 돌 채굴 경로 복구.",
+      "source": "doc-02",
+      "date": "2026-10-15",
+      "problem": "입력·공격·채굴과 중복 핫바가 플레이 흐름을 끊었다.",
+      "change": "로비 모드 선택, 좌하단 생존 수치, 5칸 핫바와 제작·채굴 경로를 수정했다.",
+      "check": "실제 Studio 실행·입력·소스 대조 기록이 있다. 새 공개 서버 전체 흐름과 실제 휴대전화 검사는 별도다.",
+      "gallery": [
+        "ev-07",
+        "ev-08",
+        "ev-09",
+        "ev-10",
+        "ev-11"
+      ]
+    },
+    {
+      "id": "go2-policy",
+      "project": "go2",
+      "label": "Go2 Robotics",
+      "number": "05",
+      "title": "새 체크포인트가,\n항상 더 나은 건 아니었다.",
+      "summary": "추가 학습 실패와 후보 평가를 남기고 기존 C0 정책을 선택한 과정.",
+      "before": "ev-32",
+      "after": "ev-33",
+      "mode": "video",
+      "pairType": "실제 실행 영상 · 9.98초",
+      "quote": "내부Q3는 공식점수 또는 성공확률이 아니다. 추가 학습의 성능 개선은 확인되지 않았다.",
+      "source": "doc-16",
+      "date": "2026-10-18",
+      "problem": "추가 학습 중 value loss inf가 발생했고 새 저장본의 개선이 확인되지 않았다.",
+      "change": "고정된 선택 규칙으로 기존 C0_5500을 유지하고 정책·검증·제출 기록을 분리했다.",
+      "check": "대표 실행 영상과 당시 평가 기록을 연결했다. 내부 지표를 공식 성적으로 표기하지 않는다.",
+      "gallery": [
+        "ev-32",
+        "ev-33"
+      ]
+    },
+    {
+      "id": "detail-design",
+      "project": "sangse",
+      "label": "Detail Studio",
+      "number": "06",
+      "title": "사진을 모으는 것에서,\n제품의 질문에 답하는 구성으로.",
+      "summary": "VARIERA 상세페이지 V4와 V5의 첫 화면, 최종 조판과 제작 근거.",
+      "before": "ev-27",
+      "after": "ev-28",
+      "mode": "side",
+      "pairType": "상세페이지 V4 / V5 · 실제 제작 결과물",
+      "quote": "완성 상세 10컷 / 의미상 10구간 / 썸네일 2장 / 신규 AI 채택 사진 3장입니다.",
+      "source": "doc-14",
+      "date": "2026-10-18",
+      "problem": "상품 정보를 길게 나열하는 대신 각 컷이 답할 질문과 근거를 정해야 했다.",
+      "change": "사진 역할과 카피, 제품 사실, 출력 컷을 계획 문서와 연결해 V5를 구성했다.",
+      "check": "조판·모바일 출력·원본 근거 파일을 확보했다. AI 사용 장면을 실제 촬영 사진으로 소개하지 않는다.",
+      "gallery": [
+        "ev-27",
+        "ev-28",
+        "ev-29"
+      ]
+    }
+  ]
+}

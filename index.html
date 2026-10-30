@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORBIT · 만드는 과정이 남는 곳</title>
+<meta name="description" content="Claude·Codex와 만든 26개 프로젝트의 실제 구조와 작업 흐름을 3D 공간에서 발표하듯 탐색하는 포트폴리오.">
+<meta name="theme-color" content="#05070b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='9' fill='%23d4ff3a'/%3E%3Cellipse cx='32' cy='32' rx='27' ry='11' fill='none' stroke='%23d4ff3a' stroke-width='3' transform='rotate(-24 32 32)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three.module.min.js",
+  "three/addons/": "./vendor/addons/"
+} }
+</script>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="labels" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+
+<header class="hud-top">
+  <a class="brand" href="#/" data-go="0" aria-label="처음으로">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="8"/><ellipse cx="32" cy="32" rx="27" ry="11" transform="rotate(-24 32 32)"/></svg>
+    <span>ORBIT</span>
+  </a>
+  <div class="crumb" id="crumb"><span class="crumb-ch"></span><span class="crumb-sl"></span></div>
+  <nav class="hud-tools" aria-label="보기 도구">
+    <button type="button" data-action="overview" title="전체 슬라이드 (G)"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>목차</span></button>
+    <button type="button" data-action="notes" title="발표 노트 (N)"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>노트</span></button>
+    <button type="button" data-action="present" title="발표 모드 (P)"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg><span>발표</span></button>
+  </nav>
+</header>
+
+<main id="stage" aria-live="polite"></main>
+
+<aside id="inspector" class="inspector" aria-hidden="true">
+  <button type="button" class="ins-close" data-action="close-inspector" aria-label="닫기">×</button>
+  <div class="ins-body"></div>
+</aside>
+
+<div id="tip" class="tip" role="tooltip"></div>
+
+<footer class="hud-bottom">
+  <div class="keys" id="keys"><kbd>←</kbd><kbd>→</kbd> 이동 <kbd>G</kbd> 목차 <kbd>P</kbd> 발표 <span class="keys-drag">· 드래그로 둘러보기</span></div>
+  <div class="counter"><b id="cnt-now">01</b><span>/</span><span id="cnt-all">00</span></div>
+  <div class="navbtns">
+    <button type="button" data-action="prev" aria-label="이전"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" data-action="next" aria-label="다음"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+  <div class="progress" id="progress"><i></i></div>
+</footer>
+
+<section id="overview" class="overview" aria-hidden="true" aria-label="전체 슬라이드">
+  <div class="ov-head"><h2>Flight plan</h2><p>원하는 지점으로 바로 이동합니다. <kbd>Esc</kbd> 닫기</p></div>
+  <div class="ov-grid"></div>
+</section>
+
+<section id="notes" class="notes" aria-hidden="true">
+  <div class="notes-head"><b>발표 노트</b><span id="timer">00:00</span></div>
+  <div class="notes-body"></div>
+</section>
+
+<div id="lightbox" class="lightbox" aria-hidden="true"><button type="button" data-action="close-lightbox" aria-label="닫기">×</button><figure><img alt=""><figcaption></figcaption></figure></div>
+<div id="blackout" aria-hidden="true"></div>
+
+<div id="boot" class="boot">
+  <div class="boot-core"><i></i><i></i><i></i></div>
+  <p class="boot-t">ORBIT</p>
+  <p class="boot-s" id="boot-s">좌표를 계산하는 중</p>
+</div>
+<noscript><p class="nojs">이 포트폴리오는 JavaScript와 WebGL이 필요합니다.</p></noscript>
+
+<script src="vendor/gsap.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
