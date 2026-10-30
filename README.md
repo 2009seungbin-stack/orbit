@@ -2,6 +2,8 @@
 
 26개 프로젝트를 3D 공간에서 발표하듯 탐색하는 포트폴리오. 빌드 없이 정적 파일로 동작합니다.
 
+**Live:** https://2009seungbin-stack.github.io/orbit/
+
 ## 실행
 
 `npm start` → http://localhost:4320 (의존성 없음, `vendor/`에 Three.js·GSAP 포함)
